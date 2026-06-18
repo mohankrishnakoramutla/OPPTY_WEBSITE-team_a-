@@ -1593,8 +1593,8 @@ header.past-hero .phone-link:hover {
 }
 
 .footer-logo-icon {
-  width: 44px;
-  height: 44px;
+  width: 140px;
+  height: 56px;
   border-radius: 10px;
   background: rgba(255,255,255,0.95);
   display: flex;
@@ -1609,8 +1609,8 @@ header.past-hero .phone-link:hover {
   transform: translateY(-2px);
 }
 .footer-logo-icon img {
-  width: 28px;
-  height: 28px;
+  width: 120px;
+  height: 40px;
   object-fit: contain;
   display: block;
 }
