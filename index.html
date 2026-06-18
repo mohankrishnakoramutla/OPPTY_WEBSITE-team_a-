@@ -243,6 +243,60 @@
   <!-- ── SERVICES CARDS SECTION ── -->
   <section class="services" id="services">
 
+    <!-- ── SVG background decoration ── -->
+    <div class="svc-bg" aria-hidden="true">
+
+      <!-- Animated grid dots -->
+      <svg class="svc-bg-dots" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="dots" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+            <circle cx="2" cy="2" r="1.5" fill="rgba(242,101,34,0.18)"/>
+          </pattern>
+        </defs>
+        <rect width="800" height="600" fill="url(#dots)"/>
+      </svg>
+
+      <!-- Top-left large blurred circle -->
+      <svg class="svc-blob svc-blob--tl" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="200" cy="200" r="200" fill="rgba(59,130,246,0.07)"/>
+      </svg>
+
+      <!-- Bottom-right large blurred circle -->
+      <svg class="svc-blob svc-blob--br" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="200" cy="200" r="200" fill="rgba(168,85,247,0.07)"/>
+      </svg>
+
+      <!-- Floating ring top-right -->
+      <svg class="svc-ring svc-ring--tr" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="80" cy="80" r="70" fill="none" stroke="rgba(242,101,34,0.15)" stroke-width="1.5" stroke-dasharray="8 6"/>
+      </svg>
+
+      <!-- Floating ring bottom-left -->
+      <svg class="svc-ring svc-ring--bl" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="60" cy="60" r="52" fill="none" stroke="rgba(76,175,125,0.18)" stroke-width="1.5" stroke-dasharray="6 5"/>
+      </svg>
+
+      <!-- Thin diagonal lines (decorative) -->
+      <svg class="svc-lines" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+        <line x1="0"   y1="400" x2="400" y2="0"   stroke="rgba(242,101,34,0.06)" stroke-width="1"/>
+        <line x1="100" y1="400" x2="500" y2="0"   stroke="rgba(59,130,246,0.05)" stroke-width="1"/>
+        <line x1="200" y1="400" x2="600" y2="0"   stroke="rgba(168,85,247,0.05)" stroke-width="1"/>
+      </svg>
+
+      <!-- Small floating hexagon outline center-left -->
+      <svg class="svc-hex" viewBox="0 0 80 90" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="40,5 75,22.5 75,67.5 40,85 5,67.5 5,22.5"
+          fill="none" stroke="rgba(76,175,125,0.20)" stroke-width="1.5"/>
+      </svg>
+
+      <!-- Small floating triangle top-center -->
+      <svg class="svc-tri" viewBox="0 0 60 54" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="30,3 57,51 3,51"
+          fill="none" stroke="rgba(242,101,34,0.18)" stroke-width="1.5"/>
+      </svg>
+
+    </div>
+
     <!-- Section heading -->
     <div class="services-header" data-reveal="blur-in">
       <p class="svc-eyebrow">What We Offer</p>

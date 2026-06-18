@@ -896,8 +896,115 @@ header.past-hero .phone-link:hover {
    SERVICES CARDS SECTION
 ───────────────────────────────────── */
 .services {
-  background: #f0f1f3;
+  position: relative;
+  background: linear-gradient(160deg, #f4f6fb 0%, #eef0f5 50%, #f7f4fb 100%);
   padding: 72px 0 80px;
+  overflow: hidden;
+}
+
+/* ── SVG background layer ── */
+.svc-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Dot-grid — covers full section */
+.svc-bg-dots {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+}
+
+/* Blurred blobs */
+.svc-blob {
+  position: absolute;
+  filter: blur(64px);
+}
+.svc-blob--tl {
+  width: 480px;
+  height: 480px;
+  top: -140px;
+  left: -140px;
+  animation: blobFloat 9s ease-in-out infinite alternate;
+}
+.svc-blob--br {
+  width: 440px;
+  height: 440px;
+  bottom: -130px;
+  right: -130px;
+  animation: blobFloat 11s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes blobFloat {
+  from { transform: translate(0, 0) scale(1);    }
+  to   { transform: translate(30px, 20px) scale(1.08); }
+}
+
+/* Dashed rotating rings */
+.svc-ring {
+  position: absolute;
+}
+.svc-ring--tr {
+  width: 180px;
+  height: 180px;
+  top: 18px;
+  right: 60px;
+  animation: spinSlow 22s linear infinite;
+}
+.svc-ring--bl {
+  width: 140px;
+  height: 140px;
+  bottom: 24px;
+  left: 48px;
+  animation: spinSlow 28s linear infinite reverse;
+}
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg);   }
+  to   { transform: rotate(360deg); }
+}
+
+/* Diagonal lines — full width overlay */
+.svc-lines {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+}
+
+/* Small floating hex — pulses gently */
+.svc-hex {
+  position: absolute;
+  width: 88px;
+  height: 88px;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  animation: hexPulse 5s ease-in-out infinite;
+}
+@keyframes hexPulse {
+  0%, 100% { opacity: 0.6; transform: translateY(-50%) scale(1);    }
+  50%       { opacity: 1;   transform: translateY(-50%) scale(1.12); }
+}
+
+/* Small floating triangle — bobs up and down */
+.svc-tri {
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  top: 14%;
+  left: 44%;
+  animation: triBob 6s ease-in-out infinite;
+}
+@keyframes triBob {
+  0%, 100% { transform: translateY(0);    opacity: 0.55; }
+  50%       { transform: translateY(-12px); opacity: 1;   }
 }
 
 /* ── Section heading ── */
@@ -905,6 +1012,8 @@ header.past-hero .phone-link:hover {
   text-align: center;
   margin-bottom: 52px;
   padding: 0 48px;
+  position: relative;
+  z-index: 1;
 }
 
 .svc-eyebrow {
@@ -943,6 +1052,8 @@ header.past-hero .phone-link:hover {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
+  position: relative;
+  z-index: 1;
 }
 
 /* ── Individual card ── */
