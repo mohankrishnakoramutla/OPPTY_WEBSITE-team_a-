@@ -596,6 +596,89 @@
     </div>
   </section>
 
+  <!-- ── TESTIMONIALS SECTION ── -->
+  <section class="testimonials" id="testimonials">
+
+    <div class="testi-header" data-reveal="blur-in">
+      <p class="testi-eyebrow">Testimonials</p>
+      <h2 class="testi-heading">OUR CLIENTS <span>REVIEWS</span></h2>
+    </div>
+
+    <!-- Slider track -->
+    <div class="testi-slider-wrap">
+      <div class="testi-track" id="testiTrack">
+
+        <div class="testi-card">
+          <div class="testi-quote">&ldquo;</div>
+          <p class="testi-name">Vikram Singh, <span>Operations Manager</span></p>
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">Oppty's BPO services streamlined our operations, letting us focus on core growth initiatives.</p>
+        </div>
+
+        <div class="testi-card">
+          <div class="testi-quote">&ldquo;</div>
+          <p class="testi-name">Anjali Sharma, <span>Marketing Lead</span></p>
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">Oppty's e-commerce platform increased our online sales by 45% in just three months!</p>
+        </div>
+
+        <div class="testi-card">
+          <div class="testi-quote">&ldquo;</div>
+          <p class="testi-name">Rohan Patel, <span>Tech Entrepreneur</span></p>
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">Their AI-driven solutions optimized our workflows, saving us significant time and costs.</p>
+        </div>
+
+        <div class="testi-card">
+          <div class="testi-quote">&ldquo;</div>
+          <p class="testi-name">Priya Nair, <span>HR Director</span></p>
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">Oppty Learn transformed how we upskill our teams. The curriculum and delivery are outstanding.</p>
+        </div>
+
+        <div class="testi-card">
+          <div class="testi-quote">&ldquo;</div>
+          <p class="testi-name">Aditya Kumar, <span>CTO</span></p>
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">Reliable IT infrastructure support and cloud expertise. Zero downtime since we partnered.</p>
+        </div>
+
+        <div class="testi-card">
+          <div class="testi-quote">&ldquo;</div>
+          <p class="testi-name">Meera Iyer, <span>CEO, FinTech Startup</span></p>
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">Oppty's ITES team handled our back-office operations flawlessly. Highly professional and responsive.</p>
+        </div>
+
+        <div class="testi-card">
+          <div class="testi-quote">&ldquo;</div>
+          <p class="testi-name">Sanjay Mehta, <span>Director of Sales</span></p>
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">The customer support BPO team exceeded every KPI we set. Our CSAT scores jumped 30% in a quarter.</p>
+        </div>
+
+        <div class="testi-card">
+          <div class="testi-quote">&ldquo;</div>
+          <p class="testi-name">Deepa Rao, <span>L&amp;D Manager</span></p>
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">Oppty Learn's certification programs are world-class. Our team completed 200+ hours of training last quarter.</p>
+        </div>
+
+        <div class="testi-card">
+          <div class="testi-quote">&ldquo;</div>
+          <p class="testi-name">Kiran Reddy, <span>VP Engineering</span></p>
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">Seamless cloud migration with no service disruption. Oppty's engineers are among the best I've worked with.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Dots -->
+    <div class="testi-dots" id="testiDots"></div>
+
+  </section>
+
   <!-- ── OUR CLIENTS SECTION ── -->
   <section class="clients" id="clients">
 
@@ -875,6 +958,61 @@
       revealEls.forEach(el => observer.observe(el));
     })();
 
+    // ── Section scroll-direction animation ──
+    (function () {
+      const sections = document.querySelectorAll(
+        '.ticker-wrap, .about, .portfolio, .services, .clients, .footer'
+      );
+
+      let lastScrollY = window.scrollY;
+
+      sections.forEach(sec => {
+        sec.classList.add('sec-hidden');
+      });
+
+      const secObserver = new IntersectionObserver((entries) => {
+        const scrollingDown = window.scrollY >= lastScrollY;
+        lastScrollY = window.scrollY;
+
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.remove('sec-from-top', 'sec-from-bottom', 'sec-hidden');
+            entry.target.classList.add('sec-visible');
+          } else {
+            // Re-arm for next scroll — set direction based on where it exited
+            const rect = entry.boundingClientRect;
+            entry.target.classList.remove('sec-visible');
+            entry.target.classList.add('sec-hidden');
+            if (rect.top > 0) {
+              // Section is below viewport — will enter from bottom
+              entry.target.classList.add('sec-from-bottom');
+            } else {
+              // Section is above viewport — will enter from top
+              entry.target.classList.add('sec-from-top');
+            }
+          }
+        });
+      }, {
+        threshold: 0.08,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      sections.forEach(sec => {
+        // Set initial state based on position
+        const rect = sec.getBoundingClientRect();
+        if (rect.top > window.innerHeight) {
+          sec.classList.add('sec-from-bottom');
+        } else if (rect.bottom < 0) {
+          sec.classList.add('sec-from-top');
+        } else {
+          // Already in view on load — show immediately
+          sec.classList.remove('sec-hidden');
+          sec.classList.add('sec-visible');
+        }
+        secObserver.observe(sec);
+      });
+    })();
+
     // ── Counter count-up animation ──
     (function () {
       const counters = document.querySelectorAll('.counter-num');
@@ -1037,6 +1175,78 @@
           });
         });
       });
+    })();
+
+    // ── Testimonials auto-slider ──
+    (function () {
+      const track   = document.getElementById('testiTrack');
+      const dotsWrap = document.getElementById('testiDots');
+      if (!track) return;
+
+      const cards = track.querySelectorAll('.testi-card');
+      const total = cards.length;
+
+      // Determine visible cards based on viewport
+      function visibleCount() {
+        if (window.innerWidth <= 560)  return 1;
+        if (window.innerWidth <= 900)  return 2;
+        return 3;
+      }
+
+      let current = 0;
+      let autoTimer;
+
+      // Build dots
+      function buildDots() {
+        dotsWrap.innerHTML = '';
+        const pages = Math.ceil(total / visibleCount());
+        for (let i = 0; i < pages; i++) {
+          const b = document.createElement('button');
+          b.className = 'testi-dot' + (i === 0 ? ' active' : '');
+          b.addEventListener('click', () => goTo(i));
+          dotsWrap.appendChild(b);
+        }
+      }
+
+      function goTo(idx) {
+        const vc    = visibleCount();
+        const pages = Math.ceil(total / vc);
+        current     = (idx + pages) % pages;
+
+        // Pixel offset: card width + gap
+        const cardW = cards[0].getBoundingClientRect().width;
+        const gap   = 24;
+        track.style.transform = `translateX(-${current * (cardW + gap) * vc}px)`;
+
+        dotsWrap.querySelectorAll('.testi-dot').forEach((d, i) => {
+          d.classList.toggle('active', i === current);
+        });
+      }
+
+      function next() { goTo(current + 1); }
+
+      function startAuto() {
+        autoTimer = setInterval(next, 4000);
+      }
+
+      function stopAuto() { clearInterval(autoTimer); }
+
+      // Pause on hover
+      track.addEventListener('mouseenter', stopAuto);
+      track.addEventListener('mouseleave', startAuto);
+
+      // Touch swipe
+      let touchX = 0;
+      track.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, { passive: true });
+      track.addEventListener('touchend',   e => {
+        const diff = touchX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 40) goTo(diff > 0 ? current + 1 : current - 1);
+      });
+
+      // Init
+      buildDots();
+      startAuto();
+      window.addEventListener('resize', () => { buildDots(); goTo(0); });
     })();
   </script>
 </body>
