@@ -1245,7 +1245,7 @@ header.past-hero .phone-link:hover {
   display: flex;
   gap: 24px;
   width: max-content;
-  animation: testi-scroll 50s linear infinite;
+  animation: testi-scroll 100s linear infinite;
 }
 
 .testi-marquee-wrap:hover .testi-marquee {
@@ -1366,11 +1366,11 @@ header.past-hero .phone-link:hover {
 
 .clients-eyebrow {
   font-family: 'Poppins', sans-serif;
-  font-size: 10px;
+  font-size: 16px;
   font-weight: 800;
   letter-spacing: 3.5px;
   text-transform: uppercase;
-  color: #4caf7d;
+  color: #ff6600;
   margin-bottom: 10px;
 }
 
@@ -1388,7 +1388,7 @@ header.past-hero .phone-link:hover {
 .clients-heading-line {
   width: 48px;
   height: 4px;
-  background: #4caf7d;
+  background: #fa7821;
   border-radius: 2px;
   margin: 0 auto 18px;
 }
