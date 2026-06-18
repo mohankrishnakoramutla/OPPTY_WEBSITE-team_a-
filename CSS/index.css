@@ -104,14 +104,14 @@ nav { display:flex; align-items:center; gap:32px; margin-right:32px; }
 nav a {
   text-decoration: none;
   color: rgba(255,255,255,0.7);
-  font-family: 'Inter', sans-serif;
-  font-size: 11.5px;
-  font-weight: 600;
-  letter-spacing: 1px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
   position: relative;
   padding-bottom: 3px;
-  transition: color 0.2s;
+  transition: color 0.25s;
 }
 nav a::after {
   content:''; position:absolute; left:0; bottom:0;
@@ -121,17 +121,33 @@ nav a::after {
 nav a:hover { color: var(--white); }
 nav a:hover::after { width: 100%; }
 
+/* Nav text turns orange after hero */
+header.past-hero nav a {
+  color: var(--orange);
+}
+header.past-hero nav a:hover {
+  color: #d4530e;
+}
+
+/* Phone number turns orange after hero */
+header.past-hero .phone-link {
+  color: var(--orange);
+}
+header.past-hero .phone-link:hover {
+  color: #d4530e;
+}
+
 .nav-actions { display:flex; align-items:center; gap:10px; flex-shrink:0; }
 
 .btn {
   display: inline-flex;
   align-items: center;
-  padding: 8px 20px;
+  padding: 8px 22px;
   border-radius: 100px;
-  font-family: 'Inter', sans-serif;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 1px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
   text-transform: uppercase;
   text-decoration: none;
   white-space: nowrap;
@@ -148,8 +164,11 @@ nav a:hover::after { width: 100%; }
 .phone-link {
   display:flex; align-items:center; gap:6px;
   color:rgba(255,255,255,0.55);
-  text-decoration:none; font-size:12px; font-weight:500;
-  margin-left:16px; white-space:nowrap; transition:color 0.2s;
+  text-decoration:none;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size:11.5px; font-weight:600;
+  margin-left:16px; white-space:nowrap;
+  transition: color 0.25s;
 }
 .phone-link:hover { color:var(--white); }
 .phone-link svg { width:13px; height:13px; fill:var(--orange); flex-shrink:0; }
@@ -317,11 +336,11 @@ nav a:hover::after { width: 100%; }
 }
 .line {
   display: block;
-  font-family: 'Poppins', sans-serif;
-  font-size: clamp(36px, 4.8vw, 64px);
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(38px, 5vw, 68px);
   font-weight: 800;
-  line-height: 1.08;
-  letter-spacing: -1.5px;
+  line-height: 1.06;
+  letter-spacing: -2px;
   color: var(--white);
   text-transform: uppercase;
 }
@@ -437,6 +456,52 @@ nav a:hover::after { width: 100%; }
   .line { font-size: clamp(32px, 9.5vw, 48px); letter-spacing: -1px; }
   .hero-content { padding: 0 20px; }
   .hero-dots { left: 20px; bottom: 28px; }
+}
+
+/* ─────────────────────────────────────
+   TICKER STRIP
+───────────────────────────────────── */
+.ticker-wrap {
+  width: 100%;
+  background: var(--orange);
+  overflow: hidden;
+  padding: 20px 0;
+  position: relative;
+  z-index: 10;
+}
+
+.ticker-track {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  gap: 0;
+  animation: ticker-scroll 22s linear infinite;
+  will-change: transform;
+}
+
+.ticker-wrap:hover .ticker-track {
+  animation-play-state: paused;
+}
+
+.ticker-item {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 0 40px;
+}
+
+.ticker-sep {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.65);
+  flex-shrink: 0;
+}
+
+@keyframes ticker-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-33.333%); }
 }
 
 /* ─────────────────────────────────────
@@ -780,5 +845,142 @@ nav a:hover::after { width: 100%; }
   }
   .svc-card {
     padding: 28px 22px 24px;
+  }
+}
+
+/* ─────────────────────────────────────
+   OUR CLIENTS SECTION
+───────────────────────────────────── */
+.clients {
+  background: #ffffff;
+  padding: 72px 0 80px;
+}
+
+/* ── Section heading ── */
+.clients-header {
+  text-align: center;
+  margin-bottom: 48px;
+  padding: 0 48px;
+}
+
+.clients-eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #4caf7d;
+  margin-bottom: 10px;
+}
+
+.clients-heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(26px, 3.5vw, 42px);
+  font-weight: 800;
+  color: #111;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-bottom: 14px;
+}
+
+.clients-heading-line {
+  width: 48px;
+  height: 4px;
+  background: #4caf7d;
+  border-radius: 2px;
+  margin: 0 auto 18px;
+}
+
+.clients-sub {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13.5px;
+  font-weight: 400;
+  color: #888;
+  line-height: 1.7;
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+/* ── Grid wrapper ── */
+.clients-grid-wrap {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* ── Individual cell ── */
+.client-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 36px 28px;
+  border-right: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  overflow: hidden;
+  background: #fff;
+  transition: background 0.22s ease;
+}
+
+/* Remove right border on last column, bottom border on last row */
+.client-cell:nth-child(4n) { border-right: none; }
+.client-cell:nth-last-child(-n+4) { border-bottom: none; }
+
+.client-cell:hover {
+  background: #f8f9fb;
+}
+
+/* ── Logo image with zoom-out hover ── */
+.client-cell img {
+  max-width: 130px;
+  max-height: 52px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transform: scale(1.12);
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  display: block;
+}
+
+.client-cell:hover img {
+  transform: scale(1.0);
+}
+
+/* ── Clients responsive ── */
+@media (max-width: 860px) {
+  .clients-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .client-cell:nth-child(4n) { border-right: 1px solid #e0e0e0; }
+  .client-cell:nth-last-child(-n+4) { border-bottom: 1px solid #e0e0e0; }
+  .client-cell:nth-child(2n) { border-right: none; }
+  .client-cell:nth-last-child(-n+2) { border-bottom: none; }
+}
+
+@media (max-width: 540px) {
+  .clients {
+    padding: 52px 0 60px;
+  }
+  .clients-header {
+    padding: 0 18px;
+    margin-bottom: 32px;
+  }
+  .clients-grid-wrap {
+    padding: 0 18px;
+  }
+  .client-cell {
+    padding: 28px 18px;
+  }
+  .client-cell img {
+    max-width: 100px;
+    max-height: 40px;
   }
 }

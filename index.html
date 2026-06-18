@@ -6,7 +6,7 @@
   <title>Oppty – Future-Ready Technology</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800;900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./CSS/index.css" />
 </head>
 <body>
@@ -105,6 +105,38 @@
     </div>
 
   </section>
+
+  <!-- ── TICKER STRIP ── -->
+  <div class="ticker-wrap">
+    <div class="ticker-track">
+      <span class="ticker-item">IT Services</span>
+      <span class="ticker-sep">★</span>
+      <span class="ticker-item">ITES Services</span>
+      <span class="ticker-sep">★</span>
+      <span class="ticker-item">BPO Services</span>
+      <span class="ticker-sep">★</span>
+      <span class="ticker-item">Oppty Learn</span>
+      <span class="ticker-sep">★</span>
+
+      <span class="ticker-item">IT Services</span>
+      <span class="ticker-sep">★</span>
+      <span class="ticker-item">ITES Services</span>
+      <span class="ticker-sep">★</span>
+      <span class="ticker-item">BPO Services</span>
+      <span class="ticker-sep">★</span>
+      <span class="ticker-item">Oppty Learn</span>
+      <span class="ticker-sep">★</span>
+
+      <span class="ticker-item">IT Services</span>
+      <span class="ticker-sep">★</span>
+      <span class="ticker-item">ITES Services</span>
+      <span class="ticker-sep">★</span>
+      <span class="ticker-item">BPO Services</span>
+      <span class="ticker-sep">★</span>
+      <span class="ticker-item">Oppty Learn</span>
+      <span class="ticker-sep">★</span>
+    </div>
+  </div>
   
   <!-- ── ABOUT SECTION ── -->
   <section class="about" id="about">
@@ -255,6 +287,84 @@
     </div>
   </section>
 
+  <!-- ── OUR CLIENTS SECTION ── -->
+  <section class="clients" id="clients">
+
+    <div class="clients-header">
+      <p class="clients-eyebrow">Trusted By</p>
+      <h2 class="clients-heading">OUR CLIENTS</h2>
+      <div class="clients-heading-line"></div>
+      <p class="clients-sub">Necessitiatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+    </div>
+
+    <div class="clients-grid-wrap">
+      <div class="clients-grid">
+
+        <!-- Row 1 -->
+        <div class="client-cell">
+          <img
+            src="./ASSETS/images/client-1.png"
+            alt="MYOB"
+            onerror="this.src='https://logo.clearbit.com/myob.com'"
+          />
+        </div>
+        <div class="client-cell">
+          <img
+            src="./ASSETS/images/client-2.png"
+            alt="Belimo"
+            onerror="this.src='https://logo.clearbit.com/belimo.com'"
+          />
+        </div>
+        <div class="client-cell">
+          <img
+            src="./ASSETS/images/client-3.png"
+            alt="LifeGroups"
+            onerror="this.src='https://logo.clearbit.com/lifegroups.com'"
+          />
+        </div>
+        <div class="client-cell">
+          <img
+            src="./ASSETS/images/client-4.png"
+            alt="Grabyo"
+            onerror="this.src='https://logo.clearbit.com/grabyo.com'"
+          />
+        </div>
+
+        <!-- Row 2 -->
+        <div class="client-cell">
+          <img
+            src="./ASSETS/images/client-5.png"
+            alt="Citrus"
+            onerror="this.src='https://logo.clearbit.com/citrusad.com'"
+          />
+        </div>
+        <div class="client-cell">
+          <img
+            src="./ASSETS/images/client-5.png"
+            alt="Trustly"
+            onerror="this.src='https://logo.clearbit.com/trustly.com'"
+          />
+        </div>
+        <div class="client-cell">
+          <img
+            src="./ASSETS/images/client-6.png"
+            alt="Oldendorff"
+            onerror="this.src='https://logo.clearbit.com/oldendorff.com'"
+          />
+        </div>
+        <div class="client-cell">
+          <img
+            src="./ASSETS/images/client-7.png"
+            alt="Lilly"
+            onerror="this.src='https://logo.clearbit.com/lilly.com'"
+          />
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
   <script>
     // ── Mobile menu ──
     function toggleMenu() {
@@ -263,7 +373,9 @@
 
     // ── Navbar scroll ──
     window.addEventListener('scroll', () => {
+      const heroH = document.getElementById('hero').offsetHeight;
       document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 40);
+      document.getElementById('navbar').classList.toggle('past-hero', window.scrollY > heroH - 60);
     });
 
     // ── SLIDER DATA ──
