@@ -141,18 +141,67 @@
   <!-- ── ABOUT SECTION ── -->
   <section class="about" id="about">
 
+    <!-- SVG Background -->
+    <div class="about-svg-bg" aria-hidden="true">
+      <!-- Large soft gradient circle top-right -->
+      <svg class="ab-blob ab-blob--tr" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="abg1" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#f26522" stop-opacity="0.10"/>
+            <stop offset="100%" stop-color="#f26522" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <circle cx="250" cy="250" r="250" fill="url(#abg1)"/>
+      </svg>
+      <!-- Large soft circle bottom-left -->
+      <svg class="ab-blob ab-blob--bl" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="abg2" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#4caf7d" stop-opacity="0.09"/>
+            <stop offset="100%" stop-color="#4caf7d" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <circle cx="200" cy="200" r="200" fill="url(#abg2)"/>
+      </svg>
+      <!-- Dot grid pattern -->
+      <svg class="ab-dots" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="ab-dot" x="0" y="0" width="28" height="28" patternUnits="userSpaceOnUse">
+            <circle cx="2" cy="2" r="1.4" fill="rgba(242,101,34,0.12)"/>
+          </pattern>
+        </defs>
+        <rect width="600" height="400" fill="url(#ab-dot)"/>
+      </svg>
+      <!-- Animated dashed ring left-center -->
+      <svg class="ab-ring ab-ring--lc" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="100" cy="100" r="88" fill="none" stroke="rgba(76,175,125,0.18)" stroke-width="1.5" stroke-dasharray="10 7"/>
+      </svg>
+      <!-- Small dashed ring top-left -->
+      <svg class="ab-ring ab-ring--tl" viewBox="0 0 130 130" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="65" cy="65" r="56" fill="none" stroke="rgba(242,101,34,0.15)" stroke-width="1.5" stroke-dasharray="7 5"/>
+      </svg>
+      <!-- Thin diagonal line accent -->
+      <svg class="ab-lines" viewBox="0 0 700 500" xmlns="http://www.w3.org/2000/svg">
+        <line x1="0" y1="500" x2="500" y2="0" stroke="rgba(242,101,34,0.05)" stroke-width="1.5"/>
+        <line x1="120" y1="500" x2="620" y2="0" stroke="rgba(76,175,125,0.05)" stroke-width="1.5"/>
+      </svg>
+      <!-- Small floating cross/plus -->
+      <svg class="ab-cross" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <line x1="12" y1="0" x2="12" y2="24" stroke="rgba(242,101,34,0.25)" stroke-width="2" stroke-linecap="round"/>
+        <line x1="0" y1="12" x2="24" y2="12" stroke="rgba(242,101,34,0.25)" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </div>
+
     <div class="about-inner">
 
-      <!-- Left: Text -->
+      <!-- Left: Big heading + card -->
       <div class="about-text" data-reveal="fade-left">
-        <div class="about-col-label">
-          <span class="about-col-tag">Our Story</span>
-          <p class="about-col-sub">Who we are &amp; what drives us</p>
-        </div>
+
+        <h2 class="about-big-heading">Consequatur eius et magnam</h2>
 
         <div class="about-card">
           <span class="about-est">EST 1988</span>
-          <h2 class="about-heading">Consequatur eius et magnam</h2>
+          <h3 class="about-heading">Our Story</h3>
           <p class="about-body">
             Inventore aliquam beatae at et id alias. Ipsa dolores amet
             consequuntur minima quia maxime autem. Quidem id sed ratione.
@@ -162,21 +211,21 @@
 
           <ul class="about-checks">
             <li>
-              <svg class="check-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none">
                 <circle cx="12" cy="12" r="11" stroke="#4caf7d" stroke-width="1.5"/>
                 <path d="M7.5 12l3 3 6-6" stroke="#4caf7d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
               Ullamco laboris nisi ut aliquip ex ea commo
             </li>
             <li>
-              <svg class="check-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none">
                 <circle cx="12" cy="12" r="11" stroke="#4caf7d" stroke-width="1.5"/>
                 <path d="M7.5 12l3 3 6-6" stroke="#4caf7d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
               Duis aute irure dolor in reprehenderit in
             </li>
             <li>
-              <svg class="check-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none">
                 <circle cx="12" cy="12" r="11" stroke="#4caf7d" stroke-width="1.5"/>
                 <path d="M7.5 12l3 3 6-6" stroke="#4caf7d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
@@ -191,7 +240,7 @@
           </p>
 
           <a href="#" class="about-video-btn">
-            <svg class="play-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="play-icon" viewBox="0 0 24 24" fill="none">
               <circle cx="12" cy="12" r="11" stroke="#4caf7d" stroke-width="1.5"/>
               <polygon points="10,8 17,12 10,16" fill="#4caf7d"/>
             </svg>
@@ -200,42 +249,93 @@
         </div>
       </div>
 
-      <!-- Right: Image + Counters -->
+      <!-- Right: Image only -->
       <div class="about-right" data-reveal="fade-right" data-delay="150">
-
-        <div class="about-col-label">
-          <span class="about-col-tag">Our Impact</span>
-          <p class="about-col-sub">Numbers that speak for themselves</p>
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=900&q=85" alt="Team meeting in office" />
         </div>
-
-        <div class="about-right-box">
-          <div class="about-image">
-            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=900&q=85" alt="Team meeting in office" />
-          </div>
-
-          <!-- Counters -->
-          <div class="about-counters">
-            <div class="counter-item">
-              <span class="counter-num" data-target="2" data-suffix="K+">0</span>
-              <span class="counter-label">Projects Completed</span>
-            </div>
-            <div class="counter-item">
-              <span class="counter-num" data-target="200" data-suffix="K+">0</span>
-              <span class="counter-label">Happy Clients</span>
-            </div>
-            <div class="counter-item">
-              <span class="counter-num" data-target="10" data-suffix="+">0</span>
-              <span class="counter-label">Awards Achieved</span>
-            </div>
-            <div class="counter-item">
-              <span class="counter-num" data-target="5" data-suffix="+">0</span>
-              <span class="counter-label">Global Branches</span>
-            </div>
-          </div>
-        </div>
-
       </div>
 
+    </div>
+
+    <!-- Counters: full-width strip below both columns -->
+    <div class="about-counters" data-reveal="fade-up" data-delay="200">
+      <div class="counter-item">
+        <span class="counter-num" data-target="2" data-suffix="K+">0</span>
+        <span class="counter-label">Projects Completed</span>
+      </div>
+      <div class="counter-item">
+        <span class="counter-num" data-target="200" data-suffix="K+">0</span>
+        <span class="counter-label">Happy Clients</span>
+      </div>
+      <div class="counter-item">
+        <span class="counter-num" data-target="10" data-suffix="+">0</span>
+        <span class="counter-label">Awards Achieved</span>
+      </div>
+      <div class="counter-item">
+        <span class="counter-num" data-target="5" data-suffix="+">0</span>
+        <span class="counter-label">Global Branches</span>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ── PORTFOLIO SECTION ── -->
+  <section class="portfolio" id="portfolio">
+
+    <div class="portfolio-header" data-reveal="blur-in">
+      <p class="portfolio-eyebrow">Our Work</p>
+      <h2 class="portfolio-heading">PORTFOLIO</h2>
+      <div class="portfolio-heading-line"></div>
+      <p class="portfolio-sub">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+    </div>
+
+    <div class="portfolio-filters" data-reveal="fade-up" data-delay="150">
+      <button class="pf-btn active" data-filter="all">All</button>
+      <button class="pf-btn" data-filter="app">App</button>
+      <button class="pf-btn" data-filter="card">Card</button>
+      <button class="pf-btn" data-filter="web">Web</button>
+    </div>
+
+    <div class="portfolio-grid" data-reveal="fade-up" data-delay="250">
+      <div class="pg-col">
+        <div class="pg-item" data-cat="app">
+          <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=600&q=80" alt="Product" />
+          <div class="pg-overlay"><span class="pg-title">Branding</span><span class="pg-sub">App Design</span></div>
+        </div>
+        <div class="pg-item pg-item--tall" data-cat="card">
+          <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=600&q=80" alt="Furniture" />
+          <div class="pg-overlay"><span class="pg-title">Furniture</span><span class="pg-sub">Card Design</span></div>
+        </div>
+      </div>
+      <div class="pg-col">
+        <div class="pg-item" data-cat="web">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80" alt="Coffee" />
+          <div class="pg-overlay"><span class="pg-title">Packaging</span><span class="pg-sub">Web Design</span></div>
+        </div>
+        <div class="pg-item pg-item--tall" data-cat="app">
+          <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=600&q=80" alt="Lamp" />
+          <div class="pg-overlay"><span class="pg-title">Lighting</span><span class="pg-sub">App Design</span></div>
+        </div>
+        <div class="pg-item" data-cat="card">
+          <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80" alt="Watch" />
+          <div class="pg-overlay"><span class="pg-title">Watch</span><span class="pg-sub">Card Design</span></div>
+        </div>
+      </div>
+      <div class="pg-col">
+        <div class="pg-item" data-cat="web">
+          <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=600&q=80" alt="Sunglasses" />
+          <div class="pg-overlay"><span class="pg-title">Branding 1</span><span class="pg-sub">Web Design</span></div>
+        </div>
+        <div class="pg-item" data-cat="app">
+          <img src="https://images.unsplash.com/photo-1452780212940-6f5c0d14d848?auto=format&fit=crop&w=600&q=80" alt="Lens" />
+          <div class="pg-overlay"><span class="pg-title">Photography</span><span class="pg-sub">App Design</span></div>
+        </div>
+        <div class="pg-item" data-cat="card">
+          <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=600&q=80" alt="Drink" />
+          <div class="pg-overlay"><span class="pg-title">Beverage</span><span class="pg-sub">Card Design</span></div>
+        </div>
+      </div>
     </div>
 
   </section>
@@ -243,58 +343,69 @@
   <!-- ── SERVICES CARDS SECTION ── -->
   <section class="services" id="services">
 
-    <!-- ── SVG background decoration ── -->
-    <div class="svc-bg" aria-hidden="true">
-
-      <!-- Animated grid dots -->
-      <svg class="svc-bg-dots" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+    <!-- SVG Background -->
+    <div class="svc-svg-bg" aria-hidden="true">
+      <!-- Top-left large gradient blob (blue) -->
+      <svg class="svc-blob2 svc-blob2--tl" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <pattern id="dots" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
-            <circle cx="2" cy="2" r="1.5" fill="rgba(242,101,34,0.18)"/>
+          <radialGradient id="sbg1" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.09"/>
+            <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <circle cx="250" cy="250" r="250" fill="url(#sbg1)"/>
+      </svg>
+      <!-- Bottom-right gradient blob (purple) -->
+      <svg class="svc-blob2 svc-blob2--br" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="sbg2" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#a855f7" stop-opacity="0.08"/>
+            <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <circle cx="250" cy="250" r="250" fill="url(#sbg2)"/>
+      </svg>
+      <!-- Center-right accent blob (orange) -->
+      <svg class="svc-blob2 svc-blob2--cr" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="sbg3" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#f26522" stop-opacity="0.07"/>
+            <stop offset="100%" stop-color="#f26522" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <circle cx="150" cy="150" r="150" fill="url(#sbg3)"/>
+      </svg>
+      <!-- Dot grid pattern -->
+      <svg class="svc-dots2" viewBox="0 0 700 900" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="svc-dot2" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
+            <circle cx="2" cy="2" r="1.5" fill="rgba(59,130,246,0.10)"/>
           </pattern>
         </defs>
-        <rect width="800" height="600" fill="url(#dots)"/>
+        <rect width="700" height="900" fill="url(#svc-dot2)"/>
       </svg>
-
-      <!-- Top-left large blurred circle -->
-      <svg class="svc-blob svc-blob--tl" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="200" cy="200" r="200" fill="rgba(59,130,246,0.07)"/>
+      <!-- Large dashed ring top-right -->
+      <svg class="svc-ring2 svc-ring2--tr" viewBox="0 0 260 260" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="130" cy="130" r="118" fill="none" stroke="rgba(242,101,34,0.13)" stroke-width="1.5" stroke-dasharray="12 8"/>
       </svg>
-
-      <!-- Bottom-right large blurred circle -->
-      <svg class="svc-blob svc-blob--br" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="200" cy="200" r="200" fill="rgba(168,85,247,0.07)"/>
+      <!-- Medium dashed ring bottom-left -->
+      <svg class="svc-ring2 svc-ring2--bl" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="90" cy="90" r="78" fill="none" stroke="rgba(168,85,247,0.14)" stroke-width="1.5" stroke-dasharray="9 6"/>
       </svg>
-
-      <!-- Floating ring top-right -->
-      <svg class="svc-ring svc-ring--tr" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="80" cy="80" r="70" fill="none" stroke="rgba(242,101,34,0.15)" stroke-width="1.5" stroke-dasharray="8 6"/>
+      <!-- Thin horizontal lines -->
+      <svg class="svc-hlines" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+        <line x1="0" y1="150" x2="800" y2="150" stroke="rgba(59,130,246,0.05)" stroke-width="1"/>
+        <line x1="0" y1="300" x2="800" y2="300" stroke="rgba(242,101,34,0.05)" stroke-width="1"/>
+        <line x1="0" y1="450" x2="800" y2="450" stroke="rgba(168,85,247,0.05)" stroke-width="1"/>
       </svg>
-
-      <!-- Floating ring bottom-left -->
-      <svg class="svc-ring svc-ring--bl" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="60" cy="60" r="52" fill="none" stroke="rgba(76,175,125,0.18)" stroke-width="1.5" stroke-dasharray="6 5"/>
+      <!-- Floating small hexagon outline -->
+      <svg class="svc-hex2" viewBox="0 0 80 92" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="40,4 76,23 76,69 40,88 4,69 4,23" fill="none" stroke="rgba(76,175,125,0.18)" stroke-width="1.5"/>
       </svg>
-
-      <!-- Thin diagonal lines (decorative) -->
-      <svg class="svc-lines" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
-        <line x1="0"   y1="400" x2="400" y2="0"   stroke="rgba(242,101,34,0.06)" stroke-width="1"/>
-        <line x1="100" y1="400" x2="500" y2="0"   stroke="rgba(59,130,246,0.05)" stroke-width="1"/>
-        <line x1="200" y1="400" x2="600" y2="0"   stroke="rgba(168,85,247,0.05)" stroke-width="1"/>
+      <!-- Floating triangle -->
+      <svg class="svc-tri2" viewBox="0 0 64 56" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="32,3 61,53 3,53" fill="none" stroke="rgba(242,101,34,0.16)" stroke-width="1.5"/>
       </svg>
-
-      <!-- Small floating hexagon outline center-left -->
-      <svg class="svc-hex" viewBox="0 0 80 90" xmlns="http://www.w3.org/2000/svg">
-        <polygon points="40,5 75,22.5 75,67.5 40,85 5,67.5 5,22.5"
-          fill="none" stroke="rgba(76,175,125,0.20)" stroke-width="1.5"/>
-      </svg>
-
-      <!-- Small floating triangle top-center -->
-      <svg class="svc-tri" viewBox="0 0 60 54" xmlns="http://www.w3.org/2000/svg">
-        <polygon points="30,3 57,51 3,51"
-          fill="none" stroke="rgba(242,101,34,0.18)" stroke-width="1.5"/>
-      </svg>
-
     </div>
 
     <!-- Section heading -->
@@ -304,72 +415,86 @@
       <div class="svc-heading-line"></div>
     </div>
 
-    <div class="services-inner">
+    <div class="services-zz">
 
-      <!-- Card 1: IT Services -->
-      <div class="svc-card" data-reveal="zoom-up" data-delay="100">
-        <div class="svc-icon-wrap">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="2" y="3" width="20" height="14" rx="2" stroke="#3b82f6" stroke-width="1.6"/>
-            <path d="M8 21h8M12 17v4" stroke="#3b82f6" stroke-width="1.6" stroke-linecap="round"/>
-            <path d="M6 8l3 3-3 3" stroke="#3b82f6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M11 14h4" stroke="#3b82f6" stroke-width="1.6" stroke-linecap="round"/>
-          </svg>
+      <!-- Row 1: Image LEFT · Text RIGHT -->
+      <div class="zz-row" data-reveal="fade-left">
+        <div class="zz-img">
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="IT Services" />
+          <span class="zz-badge" style="background:#3b82f6">IT</span>
         </div>
-        <h3 class="svc-title">IT Services</h3>
-        <p class="svc-desc">
-          End-to-end IT solutions tailored to your business. From infrastructure management to cloud migrations, we keep your technology stack modern, secure, and efficient.
-        </p>
-        <a href="./HTML/it-services.html" class="svc-btn">Learn More</a>
+        <div class="zz-text">
+          <div class="zz-icon" style="--ic:#3b82f6"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="2" stroke="#3b82f6" stroke-width="1.6"/><path d="M8 21h8M12 17v4" stroke="#3b82f6" stroke-width="1.6" stroke-linecap="round"/><path d="M6 8l3 3-3 3" stroke="#3b82f6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 14h4" stroke="#3b82f6" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+          <p class="zz-eyebrow" style="color:#3b82f6">01 — IT Services</p>
+          <h3 class="zz-title">End-to-End IT Solutions</h3>
+          <p class="zz-desc">End-to-end IT solutions tailored to your business. From infrastructure management to cloud migrations, we keep your technology stack modern, secure, and efficient.</p>
+          <ul class="zz-list">
+            <li>Infrastructure Management</li>
+            <li>Cloud Migration &amp; DevOps</li>
+            <li>Cybersecurity &amp; Compliance</li>
+          </ul>
+          <a href="./HTML/it-services.html" class="svc-btn">Learn More</a>
+        </div>
       </div>
 
-      <!-- Card 2: ITES Services -->
-      <div class="svc-card" data-reveal="zoom-up" data-delay="250">
-        <div class="svc-icon-wrap">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="12" r="3" stroke="#f26522" stroke-width="1.6"/>
-            <path d="M6.3 6.3a8 8 0 0 0 0 11.4M17.7 6.3a8 8 0 0 1 0 11.4" stroke="#f26522" stroke-width="1.6" stroke-linecap="round"/>
-            <path d="M3.5 3.5a13 13 0 0 0 0 17M20.5 3.5a13 13 0 0 1 0 17" stroke="#f26522" stroke-width="1.6" stroke-linecap="round"/>
-          </svg>
+      <!-- Row 2: Text LEFT · Image RIGHT -->
+      <div class="zz-row zz-row--rev" data-reveal="fade-right">
+        <div class="zz-img">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="ITES Services" />
+          <span class="zz-badge" style="background:#f26522">ITES</span>
         </div>
-        <h3 class="svc-title">ITES Services</h3>
-        <p class="svc-desc">
-          Comprehensive IT-enabled services that power digital transformation. We deliver data processing, technical support, and back-office solutions with speed and precision.
-        </p>
-        <a href="./HTML/ites-services.html" class="svc-btn">Learn More</a>
+        <div class="zz-text">
+          <div class="zz-icon" style="--ic:#f26522"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="#f26522" stroke-width="1.6"/><path d="M6.3 6.3a8 8 0 0 0 0 11.4M17.7 6.3a8 8 0 0 1 0 11.4" stroke="#f26522" stroke-width="1.6" stroke-linecap="round"/><path d="M3.5 3.5a13 13 0 0 0 0 17M20.5 3.5a13 13 0 0 1 0 17" stroke="#f26522" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+          <p class="zz-eyebrow" style="color:#f26522">02 — ITES Services</p>
+          <h3 class="zz-title">IT-Enabled Digital Services</h3>
+          <p class="zz-desc">Comprehensive IT-enabled services that power digital transformation. We deliver data processing, technical support, and back-office solutions with speed and precision.</p>
+          <ul class="zz-list">
+            <li>Data Processing &amp; Analytics</li>
+            <li>Technical Support Operations</li>
+            <li>Back-Office Automation</li>
+          </ul>
+          <a href="./HTML/ites-services.html" class="svc-btn">Learn More</a>
+        </div>
       </div>
 
-      <!-- Card 3: BPO Services -->
-      <div class="svc-card" data-reveal="zoom-up" data-delay="400">
-        <div class="svc-icon-wrap">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="3" y="3" width="7" height="7" rx="1.5" stroke="#4caf7d" stroke-width="1.6"/>
-            <rect x="14" y="3" width="7" height="7" rx="1.5" stroke="#4caf7d" stroke-width="1.6"/>
-            <rect x="3" y="14" width="7" height="7" rx="1.5" stroke="#4caf7d" stroke-width="1.6"/>
-            <path d="M14 17.5h7M17.5 14v7" stroke="#4caf7d" stroke-width="1.6" stroke-linecap="round"/>
-          </svg>
+      <!-- Row 3: Image LEFT · Text RIGHT -->
+      <div class="zz-row" data-reveal="fade-left">
+        <div class="zz-img">
+          <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=800&q=80" alt="BPO Services" />
+          <span class="zz-badge" style="background:#4caf7d">BPO</span>
         </div>
-        <h3 class="svc-title">BPO Services</h3>
-        <p class="svc-desc">
-          Streamline your operations with our Business Process Outsourcing expertise. We handle customer support, finance, HR, and more — so you can focus on core growth.
-        </p>
-        <a href="./HTML/bpo-services.html" class="svc-btn">Learn More</a>
+        <div class="zz-text">
+          <div class="zz-icon" style="--ic:#4caf7d"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7" rx="1.5" stroke="#4caf7d" stroke-width="1.6"/><rect x="14" y="3" width="7" height="7" rx="1.5" stroke="#4caf7d" stroke-width="1.6"/><rect x="3" y="14" width="7" height="7" rx="1.5" stroke="#4caf7d" stroke-width="1.6"/><path d="M14 17.5h7M17.5 14v7" stroke="#4caf7d" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+          <p class="zz-eyebrow" style="color:#4caf7d">03 — BPO Services</p>
+          <h3 class="zz-title">Business Process Outsourcing</h3>
+          <p class="zz-desc">Streamline your operations with our Business Process Outsourcing expertise. We handle customer support, finance, HR, and more — so you can focus on core growth.</p>
+          <ul class="zz-list">
+            <li>Customer Support &amp; Engagement</li>
+            <li>Finance &amp; Accounting BPO</li>
+            <li>HR &amp; Payroll Management</li>
+          </ul>
+          <a href="./HTML/bpo-services.html" class="svc-btn">Learn More</a>
+        </div>
       </div>
 
-      <!-- Card 4: Oppty Learn -->
-      <div class="svc-card" data-reveal="zoom-up" data-delay="550">
-        <div class="svc-icon-wrap">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 3L2 8l10 5 10-5-10-5z" stroke="#a855f7" stroke-width="1.6" stroke-linejoin="round"/>
-            <path d="M2 8v6M22 8v6" stroke="#a855f7" stroke-width="1.6" stroke-linecap="round"/>
-            <path d="M6 10.5v5a6 6 0 0 0 12 0v-5" stroke="#a855f7" stroke-width="1.6" stroke-linecap="round"/>
-          </svg>
+      <!-- Row 4: Text LEFT · Image RIGHT -->
+      <div class="zz-row zz-row--rev" data-reveal="fade-right">
+        <div class="zz-img">
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" alt="Oppty Learn" />
+          <span class="zz-badge" style="background:#a855f7">Learn</span>
         </div>
-        <h3 class="svc-title">Oppty Learn</h3>
-        <p class="svc-desc">
-          Upskill your workforce with our curated learning platform. From technical certifications to leadership programs, Oppty Learn bridges the gap between talent and potential.
-        </p>
-        <a href="./HTML/oppty-learn.html" class="svc-btn">Learn More</a>
+        <div class="zz-text">
+          <div class="zz-icon" style="--ic:#a855f7"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3L2 8l10 5 10-5-10-5z" stroke="#a855f7" stroke-width="1.6" stroke-linejoin="round"/><path d="M2 8v6M22 8v6" stroke="#a855f7" stroke-width="1.6" stroke-linecap="round"/><path d="M6 10.5v5a6 6 0 0 0 12 0v-5" stroke="#a855f7" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+          <p class="zz-eyebrow" style="color:#a855f7">04 — Oppty Learn</p>
+          <h3 class="zz-title">Workforce Learning Platform</h3>
+          <p class="zz-desc">Upskill your workforce with our curated learning platform. From technical certifications to leadership programs, Oppty Learn bridges the gap between talent and potential.</p>
+          <ul class="zz-list">
+            <li>Technical Certifications</li>
+            <li>Leadership &amp; Soft Skills</li>
+            <li>Custom Corporate Training</li>
+          </ul>
+          <a href="./HTML/oppty-learn.html" class="svc-btn">Learn More</a>
+        </div>
       </div>
 
     </div>
@@ -719,6 +844,28 @@
     // Init
     content.classList.add('text-in');
     resetTimer();
+
+    // ── Portfolio filter ──
+    (function () {
+      const btns  = document.querySelectorAll('.pf-btn');
+      const items = document.querySelectorAll('.pg-item');
+
+      btns.forEach(btn => {
+        btn.addEventListener('click', function () {
+          btns.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+
+          const filter = this.dataset.filter;
+          items.forEach(item => {
+            if (filter === 'all' || item.dataset.cat === filter) {
+              item.classList.remove('pf-hidden');
+            } else {
+              item.classList.add('pf-hidden');
+            }
+          });
+        });
+      });
+    })();
   </script>
 </body>
 </html>
