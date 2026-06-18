@@ -1328,25 +1328,8 @@ header.past-hero .phone-link:hover {
 .footer-newsletter,
 .footer-divider,
 .footer-inner,
-.footer-bottom { position: relative; z-index: 1; }
+.footer-bottom { position: relative; z-index: 1; }s
 
-/* ── Newsletter strip ── */
-.footer-newsletter {
-  background: linear-gradient(95deg, #1a1d24 0%, #151820 100%);
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-  padding: 36px 0;
-}
-
-.fnl-inner {
-  max-width: 1160px;
-  margin: 0 auto;
-  padding: 0 48px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-  flex-wrap: wrap;
-}
 
 .fnl-label {
   font-family: 'Poppins', sans-serif;
@@ -1437,12 +1420,31 @@ header.past-hero .phone-link:hover {
 }
 
 /* ── Brand col ── */
+.footer-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 12px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  width: fit-content;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(242,101,34,0.15);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+  text-decoration: none;
+}
+
+.footer-logo:hover {
+  box-shadow: 0 6px 28px rgba(242,101,34,0.30), 0 0 0 1px rgba(242,101,34,0.35);
+  transform: translateY(-2px);
+}
+
 .footer-logo img {
-  height: 42px;
+  height: 38px;
   width: auto;
   display: block;
-  margin-bottom: 18px;
-  filter: drop-shadow(0 0 10px rgba(242,101,34,0.5));
+  filter: none;
 }
 
 .footer-tagline {
