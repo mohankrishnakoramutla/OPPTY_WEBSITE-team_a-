@@ -27,6 +27,68 @@ body {
 }
 
 /* ─────────────────────────────────────
+   FLOATING SOCIAL BAR
+───────────────────────────────────── */
+.social-bar {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 998;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  animation: social-float 4s ease-in-out infinite;
+}
+
+@keyframes social-float {
+  0%,100% { transform: translateY(-50%); }
+  50%      { transform: translateY(calc(-50% - 8px)); }
+}
+
+/* Decorative line above */
+.social-bar::before,
+.social-bar::after {
+  content: '';
+  display: block;
+  width: 1.5px;
+  height: 52px;
+  background: linear-gradient(to bottom, transparent, rgba(242,101,34,0.45));
+}
+.social-bar::after {
+  background: linear-gradient(to top, transparent, rgba(242,101,34,0.45));
+}
+
+.social-bar__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  color: var(--orange);
+  text-decoration: none;
+  transition: transform 0.25s cubic-bezier(0.16,1,0.3,1), color 0.22s;
+  filter: drop-shadow(0 2px 6px rgba(242,101,34,0.20));
+}
+
+.social-bar__link svg {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.social-bar__link:hover {
+  transform: scale(1.28);
+  color: #d4530e;
+  filter: drop-shadow(0 4px 10px rgba(242,101,34,0.45));
+}
+
+@media (max-width: 768px) {
+  .social-bar { display: none; }
+}
+
+/* ─────────────────────────────────────
    NAVBAR
 ───────────────────────────────────── */
 header {
