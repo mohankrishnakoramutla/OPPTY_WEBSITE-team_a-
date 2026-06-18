@@ -343,69 +343,146 @@
   <!-- ── SERVICES CARDS SECTION ── -->
   <section class="services" id="services">
 
-    <!-- SVG Background -->
+    <!-- ── Animated SVG Background ── -->
     <div class="svc-svg-bg" aria-hidden="true">
-      <!-- Top-left large gradient blob (blue) -->
-      <svg class="svc-blob2 svc-blob2--tl" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+
+      <!-- Full-section animated SVG -->
+      <svg class="svc-bg-svg" viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice"
+           xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <radialGradient id="sbg1" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.09"/>
+          <!-- Radial glow: blue -->
+          <radialGradient id="g-blue" cx="50%" cy="50%" r="50%">
+            <stop offset="0%"   stop-color="#3b82f6" stop-opacity="0.18"/>
             <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
           </radialGradient>
-        </defs>
-        <circle cx="250" cy="250" r="250" fill="url(#sbg1)"/>
-      </svg>
-      <!-- Bottom-right gradient blob (purple) -->
-      <svg class="svc-blob2 svc-blob2--br" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <radialGradient id="sbg2" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stop-color="#a855f7" stop-opacity="0.08"/>
-            <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
-          </radialGradient>
-        </defs>
-        <circle cx="250" cy="250" r="250" fill="url(#sbg2)"/>
-      </svg>
-      <!-- Center-right accent blob (orange) -->
-      <svg class="svc-blob2 svc-blob2--cr" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <radialGradient id="sbg3" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stop-color="#f26522" stop-opacity="0.07"/>
+          <!-- Radial glow: orange -->
+          <radialGradient id="g-orange" cx="50%" cy="50%" r="50%">
+            <stop offset="0%"   stop-color="#f26522" stop-opacity="0.15"/>
             <stop offset="100%" stop-color="#f26522" stop-opacity="0"/>
           </radialGradient>
-        </defs>
-        <circle cx="150" cy="150" r="150" fill="url(#sbg3)"/>
-      </svg>
-      <!-- Dot grid pattern -->
-      <svg class="svc-dots2" viewBox="0 0 700 900" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <pattern id="svc-dot2" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
-            <circle cx="2" cy="2" r="1.5" fill="rgba(59,130,246,0.10)"/>
+          <!-- Radial glow: purple -->
+          <radialGradient id="g-purple" cx="50%" cy="50%" r="50%">
+            <stop offset="0%"   stop-color="#a855f7" stop-opacity="0.14"/>
+            <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+          </radialGradient>
+          <!-- Radial glow: green -->
+          <radialGradient id="g-green" cx="50%" cy="50%" r="50%">
+            <stop offset="0%"   stop-color="#4caf7d" stop-opacity="0.13"/>
+            <stop offset="100%" stop-color="#4caf7d" stop-opacity="0"/>
+          </radialGradient>
+          <!-- Dot pattern -->
+          <pattern id="svc-dotgrid" x="0" y="0" width="36" height="36" patternUnits="userSpaceOnUse">
+            <circle cx="2" cy="2" r="1.4" fill="rgba(59,130,246,0.11)"/>
           </pattern>
+          <!-- Bubble gradient (glassy) -->
+          <radialGradient id="bub-a" cx="35%" cy="30%" r="60%">
+            <stop offset="0%"   stop-color="#ffffff" stop-opacity="0.55"/>
+            <stop offset="60%"  stop-color="#3b82f6" stop-opacity="0.10"/>
+            <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="bub-b" cx="35%" cy="30%" r="60%">
+            <stop offset="0%"   stop-color="#ffffff" stop-opacity="0.50"/>
+            <stop offset="60%"  stop-color="#f26522" stop-opacity="0.12"/>
+            <stop offset="100%" stop-color="#f26522" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="bub-c" cx="35%" cy="30%" r="60%">
+            <stop offset="0%"   stop-color="#ffffff" stop-opacity="0.50"/>
+            <stop offset="60%"  stop-color="#a855f7" stop-opacity="0.12"/>
+            <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="bub-d" cx="35%" cy="30%" r="60%">
+            <stop offset="0%"   stop-color="#ffffff" stop-opacity="0.48"/>
+            <stop offset="60%"  stop-color="#4caf7d" stop-opacity="0.12"/>
+            <stop offset="100%" stop-color="#4caf7d" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="bub-e" cx="35%" cy="30%" r="60%">
+            <stop offset="0%"   stop-color="#ffffff" stop-opacity="0.45"/>
+            <stop offset="60%"  stop-color="#f26522" stop-opacity="0.10"/>
+            <stop offset="100%" stop-color="#f26522" stop-opacity="0"/>
+          </radialGradient>
+          <filter id="soft-blur">
+            <feGaussianBlur stdDeviation="1.2"/>
+          </filter>
         </defs>
-        <rect width="700" height="900" fill="url(#svc-dot2)"/>
+
+        <!-- Dot grid overlay -->
+        <rect width="1440" height="600" fill="url(#svc-dotgrid)" opacity="0.9"/>
+
+        <!-- ── Large glowing orbs (slow float) ── -->
+        <ellipse class="svc-orb svc-orb--1" cx="160"  cy="120" rx="260" ry="260" fill="url(#g-blue)"/>
+        <ellipse class="svc-orb svc-orb--2" cx="1300" cy="480" rx="300" ry="300" fill="url(#g-purple)"/>
+        <ellipse class="svc-orb svc-orb--3" cx="780"  cy="300" rx="220" ry="220" fill="url(#g-orange)"/>
+        <ellipse class="svc-orb svc-orb--4" cx="1080" cy="80"  rx="190" ry="190" fill="url(#g-green)"/>
+
+        <!-- ── Smooth wave (bottom) ── -->
+        <path class="svc-wave svc-wave--1"
+          d="M0,480 C200,440 400,520 600,480 C800,440 1000,510 1200,475 C1320,458 1400,470 1440,468 L1440,600 L0,600 Z"
+          fill="rgba(59,130,246,0.04)"/>
+        <path class="svc-wave svc-wave--2"
+          d="M0,510 C180,490 360,530 540,510 C720,490 900,525 1080,505 C1260,485 1380,510 1440,505 L1440,600 L0,600 Z"
+          fill="rgba(242,101,34,0.035)"/>
+        <path class="svc-wave svc-wave--3"
+          d="M0,540 C240,520 480,555 720,535 C960,515 1200,548 1440,530 L1440,600 L0,600 Z"
+          fill="rgba(168,85,247,0.04)"/>
+
+        <!-- ── Animated bubbles (glassmorphic circles) ── -->
+        <!-- bubble 1 -->
+        <g class="svc-bub svc-bub--1">
+          <circle cx="110" cy="420" r="38" fill="url(#bub-a)" filter="url(#soft-blur)"/>
+          <circle cx="110" cy="420" r="38" fill="none" stroke="rgba(59,130,246,0.22)" stroke-width="1"/>
+          <circle cx="100" cy="410" r="10" fill="rgba(255,255,255,0.30)"/>
+        </g>
+        <!-- bubble 2 -->
+        <g class="svc-bub svc-bub--2">
+          <circle cx="320" cy="80" r="26" fill="url(#bub-b)" filter="url(#soft-blur)"/>
+          <circle cx="320" cy="80" r="26" fill="none" stroke="rgba(242,101,34,0.20)" stroke-width="1"/>
+          <circle cx="312" cy="72" r="7"  fill="rgba(255,255,255,0.30)"/>
+        </g>
+        <!-- bubble 3 -->
+        <g class="svc-bub svc-bub--3">
+          <circle cx="1240" cy="100" r="44" fill="url(#bub-c)" filter="url(#soft-blur)"/>
+          <circle cx="1240" cy="100" r="44" fill="none" stroke="rgba(168,85,247,0.20)" stroke-width="1"/>
+          <circle cx="1228" cy="88"  r="12" fill="rgba(255,255,255,0.28)"/>
+        </g>
+        <!-- bubble 4 -->
+        <g class="svc-bub svc-bub--4">
+          <circle cx="900"  cy="510" r="32" fill="url(#bub-d)" filter="url(#soft-blur)"/>
+          <circle cx="900"  cy="510" r="32" fill="none" stroke="rgba(76,175,125,0.22)" stroke-width="1"/>
+          <circle cx="890"  cy="500" r="9"  fill="rgba(255,255,255,0.28)"/>
+        </g>
+        <!-- bubble 5 -->
+        <g class="svc-bub svc-bub--5">
+          <circle cx="640"  cy="60"  r="20" fill="url(#bub-e)" filter="url(#soft-blur)"/>
+          <circle cx="640"  cy="60"  r="20" fill="none" stroke="rgba(242,101,34,0.18)" stroke-width="1"/>
+          <circle cx="633"  cy="53"  r="5"  fill="rgba(255,255,255,0.28)"/>
+        </g>
+        <!-- bubble 6 -->
+        <g class="svc-bub svc-bub--6">
+          <circle cx="1380" cy="330" r="28" fill="url(#bub-a)" filter="url(#soft-blur)"/>
+          <circle cx="1380" cy="330" r="28" fill="none" stroke="rgba(59,130,246,0.18)" stroke-width="1"/>
+          <circle cx="1371" cy="321" r="7"  fill="rgba(255,255,255,0.28)"/>
+        </g>
+        <!-- bubble 7 (tiny accent) -->
+        <g class="svc-bub svc-bub--7">
+          <circle cx="460"  cy="500" r="16" fill="url(#bub-c)" filter="url(#soft-blur)"/>
+          <circle cx="460"  cy="500" r="16" fill="none" stroke="rgba(168,85,247,0.18)" stroke-width="0.8"/>
+          <circle cx="454"  cy="494" r="4"  fill="rgba(255,255,255,0.26)"/>
+        </g>
+
+        <!-- ── Dashed rotating rings ── -->
+        <circle class="svc-ring-svg svc-ring-svg--a" cx="80"  cy="540" r="90"
+          fill="none" stroke="rgba(242,101,34,0.12)" stroke-width="1.2" stroke-dasharray="10 7"/>
+        <circle class="svc-ring-svg svc-ring-svg--b" cx="1380" cy="60" r="70"
+          fill="none" stroke="rgba(168,85,247,0.12)" stroke-width="1.2" stroke-dasharray="8 6"/>
+        <circle class="svc-ring-svg svc-ring-svg--c" cx="700" cy="300" r="50"
+          fill="none" stroke="rgba(76,175,125,0.10)" stroke-width="1" stroke-dasharray="6 5"/>
+
+        <!-- ── Thin diagonal lines ── -->
+        <line x1="0"   y1="600" x2="500" y2="0"   stroke="rgba(242,101,34,0.05)" stroke-width="1"/>
+        <line x1="200" y1="600" x2="700" y2="0"   stroke="rgba(59,130,246,0.04)" stroke-width="1"/>
+        <line x1="900" y1="600" x2="1440" y2="0"  stroke="rgba(168,85,247,0.04)" stroke-width="1"/>
       </svg>
-      <!-- Large dashed ring top-right -->
-      <svg class="svc-ring2 svc-ring2--tr" viewBox="0 0 260 260" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="130" cy="130" r="118" fill="none" stroke="rgba(242,101,34,0.13)" stroke-width="1.5" stroke-dasharray="12 8"/>
-      </svg>
-      <!-- Medium dashed ring bottom-left -->
-      <svg class="svc-ring2 svc-ring2--bl" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="90" cy="90" r="78" fill="none" stroke="rgba(168,85,247,0.14)" stroke-width="1.5" stroke-dasharray="9 6"/>
-      </svg>
-      <!-- Thin horizontal lines -->
-      <svg class="svc-hlines" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-        <line x1="0" y1="150" x2="800" y2="150" stroke="rgba(59,130,246,0.05)" stroke-width="1"/>
-        <line x1="0" y1="300" x2="800" y2="300" stroke="rgba(242,101,34,0.05)" stroke-width="1"/>
-        <line x1="0" y1="450" x2="800" y2="450" stroke="rgba(168,85,247,0.05)" stroke-width="1"/>
-      </svg>
-      <!-- Floating small hexagon outline -->
-      <svg class="svc-hex2" viewBox="0 0 80 92" xmlns="http://www.w3.org/2000/svg">
-        <polygon points="40,4 76,23 76,69 40,88 4,69 4,23" fill="none" stroke="rgba(76,175,125,0.18)" stroke-width="1.5"/>
-      </svg>
-      <!-- Floating triangle -->
-      <svg class="svc-tri2" viewBox="0 0 64 56" xmlns="http://www.w3.org/2000/svg">
-        <polygon points="32,3 61,53 3,53" fill="none" stroke="rgba(242,101,34,0.16)" stroke-width="1.5"/>
-      </svg>
+
     </div>
 
     <!-- Section heading -->
@@ -580,46 +657,124 @@
 
   <!-- ── FOOTER ── -->
   <footer class="footer">
+
+    <!-- ── Animated SVG background ── -->
+    <div class="footer-bg" aria-hidden="true">
+      <svg class="footer-bg-svg" viewBox="0 0 1440 520" preserveAspectRatio="xMidYMid slice"
+           xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="fg-orange" cx="50%" cy="50%" r="50%">
+            <stop offset="0%"   stop-color="#f26522" stop-opacity="0.18"/>
+            <stop offset="100%" stop-color="#f26522" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="fg-blue" cx="50%" cy="50%" r="50%">
+            <stop offset="0%"   stop-color="#3b82f6" stop-opacity="0.12"/>
+            <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="fg-purple" cx="50%" cy="50%" r="50%">
+            <stop offset="0%"   stop-color="#a855f7" stop-opacity="0.10"/>
+            <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+          </radialGradient>
+          <pattern id="ft-dots" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+            <circle cx="1.5" cy="1.5" r="1.2" fill="rgba(255,255,255,0.045)"/>
+          </pattern>
+        </defs>
+
+        <!-- Dot grid -->
+        <rect width="1440" height="520" fill="url(#ft-dots)"/>
+
+        <!-- Orbs -->
+        <ellipse class="ft-orb ft-orb--1" cx="120"  cy="80"  rx="280" ry="280" fill="url(#fg-orange)"/>
+        <ellipse class="ft-orb ft-orb--2" cx="1340" cy="440" rx="300" ry="300" fill="url(#fg-blue)"/>
+        <ellipse class="ft-orb ft-orb--3" cx="720"  cy="260" rx="200" ry="200" fill="url(#fg-purple)"/>
+
+        <!-- Wave shapes at top of footer (reversed) -->
+        <path class="ft-wave ft-wave--1"
+          d="M0,60 C240,20 480,90 720,55 C960,20 1200,80 1440,50 L1440,0 L0,0 Z"
+          fill="rgba(242,101,34,0.04)"/>
+        <path class="ft-wave ft-wave--2"
+          d="M0,40 C300,80 600,10 900,50 C1100,80 1280,30 1440,55 L1440,0 L0,0 Z"
+          fill="rgba(59,130,246,0.03)"/>
+
+        <!-- Dashed rotating rings -->
+        <circle class="ft-ring ft-ring--a" cx="200"  cy="440" r="110"
+          fill="none" stroke="rgba(242,101,34,0.10)" stroke-width="1" stroke-dasharray="10 7"/>
+        <circle class="ft-ring ft-ring--b" cx="1260" cy="80"  r="80"
+          fill="none" stroke="rgba(168,85,247,0.10)" stroke-width="1" stroke-dasharray="8 6"/>
+        <circle class="ft-ring ft-ring--c" cx="740"  cy="300" r="60"
+          fill="none" stroke="rgba(59,130,246,0.08)" stroke-width="1" stroke-dasharray="6 5"/>
+
+        <!-- Thin diagonal lines -->
+        <line x1="0"    y1="520" x2="460"  y2="0" stroke="rgba(242,101,34,0.045)" stroke-width="1"/>
+        <line x1="500"  y1="520" x2="980"  y2="0" stroke="rgba(59,130,246,0.04)"  stroke-width="1"/>
+        <line x1="1000" y1="520" x2="1440" y2="0" stroke="rgba(168,85,247,0.04)"  stroke-width="1"/>
+      </svg>
+
+      <!-- Big ghost wordmark -->
+      <span class="footer-watermark" aria-hidden="true">OPPTY</span>
+    </div>
+
+    <!-- ── Newsletter strip ── -->
+    <div class="footer-newsletter" data-reveal="fade-up">
+      <div class="fnl-inner">
+        <div class="fnl-text">
+          <p class="fnl-label">Stay in the loop</p>
+          <h3 class="fnl-heading">Subscribe to our newsletter</h3>
+        </div>
+        <form class="fnl-form" onsubmit="return false">
+          <input type="email" class="fnl-input" placeholder="Enter your email address" aria-label="Email"/>
+          <button type="submit" class="fnl-btn">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- ── Divider ── -->
+    <div class="footer-divider"></div>
+
+    <!-- ── Main grid ── -->
     <div class="footer-inner">
 
-      <!-- Col 1: Logo + address + socials -->
+      <!-- Col 1: Brand -->
       <div class="footer-col footer-brand" data-reveal="fade-up" data-delay="100">
         <a href="#" class="footer-logo">
           <img src="./ASSETS/images/oppty.png" alt="Oppty Logo" />
         </a>
+        <p class="footer-tagline">Future-Ready Technology.<br/>Powered by People.</p>
         <p class="footer-addr">
-          Oppty TechHub Private Limited<br />
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z" fill="rgba(242,101,34,0.8)"/></svg>
           Hyderabad, Telangana, India
         </p>
-        <p class="footer-contact">
-          <span>Phone:</span> <a href="tel:+919491209900">+91 9491209900</a>
+        <p class="footer-addr">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1H8c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57-.11.34-.03.74-.24 1.01L6.6 10.8z" fill="rgba(242,101,34,0.8)"/></svg>
+          <a href="tel:+919491209900">+91 9491209900</a>
         </p>
-        <p class="footer-contact">
-          <span>Email:</span> <a href="mailto:info@oppty.in">info@oppty.in</a>
+        <p class="footer-addr">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="rgba(242,101,34,0.8)"/></svg>
+          <a href="mailto:info@oppty.in">info@oppty.in</a>
         </p>
+
+        <!-- Socials -->
         <div class="footer-socials">
-          <!-- X / Twitter -->
-          <a href="#" aria-label="X">
+          <a href="#" aria-label="X / Twitter" class="fsoc">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L2.25 2.25h6.961l4.261 5.636 4.772-5.636zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
           </a>
-          <!-- Facebook -->
-          <a href="#" aria-label="Facebook">
+          <a href="#" aria-label="Facebook" class="fsoc">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.198 21.5h4v-8.01h3.604l.396-3.98h-4V7.5a1 1 0 0 1 1-1h3v-4h-3a5 5 0 0 0-5 5v2.01h-2l-.396 3.98h2.396v8.01z"/></svg>
           </a>
-          <!-- Instagram -->
-          <a href="#" aria-label="Instagram">
+          <a href="#" aria-label="Instagram" class="fsoc">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
           </a>
-          <!-- LinkedIn -->
-          <a href="#" aria-label="LinkedIn">
+          <a href="#" aria-label="LinkedIn" class="fsoc">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
           </a>
         </div>
       </div>
 
       <!-- Col 2: Useful Links -->
-      <div class="footer-col" data-reveal="fade-up" data-delay="250">
-        <h4 class="footer-heading">Useful Links</h4>
+      <div class="footer-col" data-reveal="fade-up" data-delay="200">
+        <h4 class="footer-heading">
+          <span class="fh-accent"></span>Quick Links
+        </h4>
         <ul class="footer-links">
           <li><a href="#">Home</a></li>
           <li><a href="#">About Us</a></li>
@@ -630,8 +785,10 @@
       </div>
 
       <!-- Col 3: Our Services -->
-      <div class="footer-col" data-reveal="fade-up" data-delay="400">
-        <h4 class="footer-heading">Our Services</h4>
+      <div class="footer-col" data-reveal="fade-up" data-delay="320">
+        <h4 class="footer-heading">
+          <span class="fh-accent"></span>Our Services
+        </h4>
         <ul class="footer-links">
           <li><a href="./HTML/it-services.html">IT Services</a></li>
           <li><a href="./HTML/ites-services.html">ITES Services</a></li>
@@ -641,28 +798,38 @@
       </div>
 
       <!-- Col 4: Google Map -->
-      <div class="footer-col footer-map-col" data-reveal="fade-up" data-delay="550">
-        <h4 class="footer-heading">Find Us</h4>
+      <div class="footer-col footer-map-col" data-reveal="fade-up" data-delay="440">
+        <h4 class="footer-heading">
+          <span class="fh-accent"></span>Find Us
+        </h4>
         <div class="footer-map">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.1965388409144!2d78.3327813758126!3d17.498128999604173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93d5ccaa5227%3A0xde534d4e3362e42b!2sOppty%20TechHub%20Private%20Limited!5e0!3m2!1sen!2sin!4v1781771371119!5m2!1sen!2sin"
-            width="100%"
-            height="200"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Oppty TechHub Location"
-          ></iframe>
+            width="100%" height="190" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" title="Oppty TechHub Location">
+          </iframe>
+        </div>
+        <!-- Business hours badge -->
+        <div class="footer-hours">
+          <span class="fh-dot"></span>
+          <span>Mon – Sat &nbsp;|&nbsp; 9:00 AM – 6:00 PM</span>
         </div>
       </div>
 
     </div>
 
-    <!-- Bottom bar -->
+    <!-- ── Bottom bar ── -->
     <div class="footer-bottom">
-      <p>© Copyright <strong>Oppty TechHub</strong> All Rights Reserved</p>
+      <p class="fb-copy">© 2025 <strong>Oppty TechHub Private Limited</strong>. All Rights Reserved.</p>
+      <div class="fb-badges">
+        <span>Privacy Policy</span>
+        <span class="fb-dot-sep">·</span>
+        <span>Terms of Service</span>
+        <span class="fb-dot-sep">·</span>
+        <span>Sitemap</span>
+      </div>
     </div>
+
   </footer>
 
   <script>
