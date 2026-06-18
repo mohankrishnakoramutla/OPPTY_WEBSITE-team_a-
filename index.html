@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oppty – Future-Ready Technology</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800;900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./CSS/index.css" />
+</head>
+<body>
+
+  <!-- ── NAVBAR ── -->
+  <header id="navbar">
+    <div class="nav-inner">
+
+      <a href="#" class="logo">
+        <img class="logo-img" src="./ASSETS/images/oppty.png" alt="Oppty Logo" />
+      </a>
+
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Our Services</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Careers</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#" class="btn btn-academy">Academy</a>
+        <a href="#" class="btn btn-training">Training Partner</a>
+        <a href="tel:+919491209900" class="phone-link">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1H8c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57-.11.34-.03.74-.24 1.01L6.6 10.8z"/>
+          </svg>
+          +91 9491209900
+        </a>
+      </div>
+
+      <button class="hamburger" aria-label="Toggle menu" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#">Home</a>
+      <a href="#">About Us</a>
+      <a href="#">Our Services</a>
+      <a href="#">Contact Us</a>
+      <a href="#">Careers</a>
+      <div class="mobile-btns">
+        <a href="#" class="btn btn-academy">Academy</a>
+        <a href="#" class="btn btn-training">Training Partner</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── HERO SLIDER ── -->
+  <section class="hero" id="hero">
+
+    <!-- Slide backgrounds -->
+    <div class="slides">
+      <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1920&q=90')"></div>
+      <div class="slide"        style="background-image:url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1920&q=90')"></div>
+      <div class="slide"        style="background-image:url(https://media.istockphoto.com/id/1387192613/photo/cheerful-young-woman-holding-laptop-computer-pretty-lady-model-with-emotionally-showing.jpg?s=612x612&w=0&k=20&c=7X5ufj-_Abie0UBzuPtP175eDszP1T5NSJBcFT97nWk=)"></div>
+    </div>
+
+    <!-- Dark overlay -->
+    <div class="slide-overlay"></div>
+
+    <!-- Hero text — changes per slide -->
+    <div class="hero-content" id="heroContent">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span id="badgeText">Intelligent Automation</span>
+      </div>
+      <h1 class="hero-title">
+        <span class="line" id="titleLine1">Future-Ready</span>
+        <span class="line accent" id="titleLine2">Technology</span>
+      </h1>
+      <p class="hero-sub" id="heroSub">
+        We combine AI, automation, and intelligent operations to help enterprises scale faster, reduce costs, and stay ahead of disruption.
+      </p>
+      <div class="hero-pills" id="heroPills">
+        <span class="hero-pill"><span class="pill-dot"></span>AI Automation</span>
+        <span class="hero-pill"><span class="pill-dot"></span>Efficient BPO</span>
+        <span class="hero-pill"><span class="pill-dot"></span>Proactive AIOps</span>
+      </div>
+    </div>
+
+    <!-- Scroll line -->
+    <div class="scroll-hint"><div class="scroll-line"></div></div>
+
+    <!-- Dots -->
+    <div class="hero-dots" id="heroDots">
+      <button class="hero-dot active" onclick="goTo(0)"></button>
+      <button class="hero-dot" onclick="goTo(1)"></button>
+      <button class="hero-dot" onclick="goTo(2)"></button>
+    </div>
+
+    <!-- Slide counter -->
+    <div class="slide-counter">
+      <span id="slideNum">01</span><span class="sc-sep"></span><span>03</span>
+    </div>
+
+  </section>
+  
+  <!-- ── ABOUT SECTION ── -->
+  <section class="about" id="about">
+
+    <div class="about-inner">
+
+      <!-- Left: Text -->
+      <div class="about-text">
+        <p class="about-eyebrow">Consequatur eius et magnam</p>
+
+        <div class="about-card">
+          <span class="about-est">EST 1988</span>
+          <h2 class="about-heading">Our Story</h2>
+          <p class="about-body">
+            Inventore aliquam beatae at et id alias. Ipsa dolores amet
+            consequuntur minima quia maxime autem. Quidem id sed ratione.
+            Tenetur provident autem in reiciendis rerum at dolor.
+            Aliquam consectetur laudantium temporibus dicta minus dolor.
+          </p>
+
+          <ul class="about-checks">
+            <li>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="11" stroke="#4caf7d" stroke-width="1.5"/>
+                <path d="M7.5 12l3 3 6-6" stroke="#4caf7d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Ullamco laboris nisi ut aliquip ex ea commo
+            </li>
+            <li>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="11" stroke="#4caf7d" stroke-width="1.5"/>
+                <path d="M7.5 12l3 3 6-6" stroke="#4caf7d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Duis aute irure dolor in reprehenderit in
+            </li>
+            <li>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="11" stroke="#4caf7d" stroke-width="1.5"/>
+                <path d="M7.5 12l3 3 6-6" stroke="#4caf7d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Ullamco laboris nisi ut aliquip ex ea
+            </li>
+          </ul>
+
+          <p class="about-body">
+            Vitae autem velit excepturi fugit. Animi ad non. Eligendi et non
+            nesciunt suscipit repellendus porro in quo eveniet. Molestias
+            in maxime doloremque.
+          </p>
+
+          <a href="#" class="about-video-btn">
+            <svg class="play-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="11" stroke="#4caf7d" stroke-width="1.5"/>
+              <polygon points="10,8 17,12 10,16" fill="#4caf7d"/>
+            </svg>
+            Watch Video
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Image -->
+      <div class="about-image">
+        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=900&q=85" alt="Team meeting in office" />
+      </div>
+
+    </div>
+
+  </section>
+
+  <script>
+    // ── Mobile menu ──
+    function toggleMenu() {
+      document.getElementById('mobileNav').classList.toggle('open');
+    }
+
+    // ── Navbar scroll ──
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    // ── SLIDER DATA ──
+    const slides = [
+      {
+        badge : 'Intelligent Automation',
+        line1 : 'Future-Ready',
+        line2 : 'Technology',
+        sub   : 'We combine AI, automation, and intelligent operations to help enterprises scale faster, reduce costs, and stay ahead of disruption.',
+        pills : ['AI Automation', 'Efficient BPO', 'Proactive AIOps']
+      },
+      {
+        badge : 'Business Process Outsourcing',
+        line1 : 'Streamline Your',
+        line2 : 'Operations',
+        sub   : 'From back-office processing to customer engagement, our BPO solutions are built for accuracy, speed, and seamless integration.',
+        pills : ['Process Excellence', 'Cost Efficiency', 'Scalable Teams']
+      },
+      {
+        badge : 'Leadership & Innovation',
+        line1 : 'Driving Digital',
+        line2 : 'Transformation',
+        sub   : 'Partner with Oppty to modernize your workforce, accelerate growth, and build the capabilities your business needs for tomorrow.',
+        pills : ['Strategic Vision', 'Digital Upskilling', 'Proven Results']
+      }
+    ];
+
+    let current  = 0;
+    let timer    = null;
+    let isAnimating = false;
+    const INTERVAL  = 4000; // 4s per slide
+
+    const slideEls  = document.querySelectorAll('.slide');
+    const dotEls    = document.querySelectorAll('.hero-dot');
+    const content   = document.getElementById('heroContent');
+    const numEl     = document.getElementById('slideNum');
+
+    function pad(n){ return n < 10 ? '0'+n : ''+n; }
+
+    function updateContent(idx) {
+      const d = slides[idx];
+      document.getElementById('badgeText').textContent  = d.badge;
+      document.getElementById('titleLine1').textContent = d.line1;
+      document.getElementById('titleLine2').textContent = d.line2;
+      document.getElementById('heroSub').textContent    = d.sub;
+
+      const pillsEl = document.getElementById('heroPills');
+      pillsEl.innerHTML = d.pills.map(p =>
+        `<span class="hero-pill"><span class="pill-dot"></span>${p}</span>`
+      ).join('');
+
+      numEl.textContent = pad(idx + 1);
+    }
+
+    function goTo(idx) {
+      if (isAnimating || idx === current) return;
+      isAnimating = true;
+
+      const prevIdx = current;
+
+      // 1. Text exits first
+      content.classList.remove('text-in');
+      content.classList.add('text-out');
+
+      setTimeout(() => {
+        // 2. Slide wipe begins — new slide clips in, old drifts out
+        slideEls[prevIdx].classList.remove('active');
+        slideEls[prevIdx].classList.add('leaving');
+        slideEls[idx].classList.add('active');
+
+        dotEls[prevIdx].classList.remove('active');
+        dotEls[idx].classList.add('active');
+
+        // 3. Update and reveal new text
+        current = idx;
+        updateContent(current);
+        content.classList.remove('text-out');
+        content.classList.add('text-in');
+
+        // 4. Clean up leaving class after wipe completes
+        setTimeout(() => {
+          slideEls[prevIdx].classList.remove('leaving');
+          isAnimating = false;
+        }, 1300);
+
+      }, 400);
+
+      resetTimer();
+    }
+
+    function next() {
+      goTo((current + 1) % slides.length);
+    }
+
+    function resetTimer() {
+      clearInterval(timer);
+      timer = setInterval(next, INTERVAL);
+    }
+
+    // Init
+    content.classList.add('text-in');
+    resetTimer();
+  </script>
+</body>
+</html>
