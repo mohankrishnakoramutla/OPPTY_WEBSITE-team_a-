@@ -6,7 +6,7 @@
   <title>Oppty – Future-Ready Technology</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./CSS/index.css" />
 </head>
 <body>
@@ -107,7 +107,7 @@
   </section>
 
   <!-- ── TICKER STRIP ── -->
-  <div class="ticker-wrap">
+  <div class="ticker-wrap" data-reveal="fade-up">
     <div class="ticker-track">
       <span class="ticker-item">IT Services</span>
       <span class="ticker-sep">★</span>
@@ -144,12 +144,15 @@
     <div class="about-inner">
 
       <!-- Left: Text -->
-      <div class="about-text">
-        <p class="about-eyebrow">Consequatur eius et magnam</p>
+      <div class="about-text" data-reveal="fade-left">
+        <div class="about-col-label">
+          <span class="about-col-tag">Our Story</span>
+          <p class="about-col-sub">Who we are &amp; what drives us</p>
+        </div>
 
         <div class="about-card">
           <span class="about-est">EST 1988</span>
-          <h2 class="about-heading">Our Story</h2>
+          <h2 class="about-heading">Consequatur eius et magnam</h2>
           <p class="about-body">
             Inventore aliquam beatae at et id alias. Ipsa dolores amet
             consequuntur minima quia maxime autem. Quidem id sed ratione.
@@ -197,9 +200,40 @@
         </div>
       </div>
 
-      <!-- Right: Image -->
-      <div class="about-image">
-        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=900&q=85" alt="Team meeting in office" />
+      <!-- Right: Image + Counters -->
+      <div class="about-right" data-reveal="fade-right" data-delay="150">
+
+        <div class="about-col-label">
+          <span class="about-col-tag">Our Impact</span>
+          <p class="about-col-sub">Numbers that speak for themselves</p>
+        </div>
+
+        <div class="about-right-box">
+          <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=900&q=85" alt="Team meeting in office" />
+          </div>
+
+          <!-- Counters -->
+          <div class="about-counters">
+            <div class="counter-item">
+              <span class="counter-num" data-target="2" data-suffix="K+">0</span>
+              <span class="counter-label">Projects Completed</span>
+            </div>
+            <div class="counter-item">
+              <span class="counter-num" data-target="200" data-suffix="K+">0</span>
+              <span class="counter-label">Happy Clients</span>
+            </div>
+            <div class="counter-item">
+              <span class="counter-num" data-target="10" data-suffix="+">0</span>
+              <span class="counter-label">Awards Achieved</span>
+            </div>
+            <div class="counter-item">
+              <span class="counter-num" data-target="5" data-suffix="+">0</span>
+              <span class="counter-label">Global Branches</span>
+            </div>
+          </div>
+        </div>
+
       </div>
 
     </div>
@@ -210,7 +244,7 @@
   <section class="services" id="services">
 
     <!-- Section heading -->
-    <div class="services-header">
+    <div class="services-header" data-reveal="blur-in">
       <p class="svc-eyebrow">What We Offer</p>
       <h2 class="svc-heading">OUR SERVICES</h2>
       <div class="svc-heading-line"></div>
@@ -219,7 +253,7 @@
     <div class="services-inner">
 
       <!-- Card 1: IT Services -->
-      <div class="svc-card">
+      <div class="svc-card" data-reveal="zoom-up" data-delay="100">
         <div class="svc-icon-wrap">
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="2" y="3" width="20" height="14" rx="2" stroke="#3b82f6" stroke-width="1.6"/>
@@ -236,7 +270,7 @@
       </div>
 
       <!-- Card 2: ITES Services -->
-      <div class="svc-card">
+      <div class="svc-card" data-reveal="zoom-up" data-delay="250">
         <div class="svc-icon-wrap">
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="12" cy="12" r="3" stroke="#f26522" stroke-width="1.6"/>
@@ -252,7 +286,7 @@
       </div>
 
       <!-- Card 3: BPO Services -->
-      <div class="svc-card">
+      <div class="svc-card" data-reveal="zoom-up" data-delay="400">
         <div class="svc-icon-wrap">
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="3" y="3" width="7" height="7" rx="1.5" stroke="#4caf7d" stroke-width="1.6"/>
@@ -269,7 +303,7 @@
       </div>
 
       <!-- Card 4: Oppty Learn -->
-      <div class="svc-card">
+      <div class="svc-card" data-reveal="zoom-up" data-delay="550">
         <div class="svc-icon-wrap">
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M12 3L2 8l10 5 10-5-10-5z" stroke="#a855f7" stroke-width="1.6" stroke-linejoin="round"/>
@@ -290,7 +324,7 @@
   <!-- ── OUR CLIENTS SECTION ── -->
   <section class="clients" id="clients">
 
-    <div class="clients-header">
+    <div class="clients-header" data-reveal="blur-in">
       <p class="clients-eyebrow">Trusted By</p>
       <h2 class="clients-heading">OUR CLIENTS</h2>
       <div class="clients-heading-line"></div>
@@ -301,28 +335,28 @@
       <div class="clients-grid">
 
         <!-- Row 1 -->
-        <div class="client-cell">
+        <div class="client-cell" data-reveal="zoom-in" data-delay="100">
           <img
             src="./ASSETS/images/client-1.png"
             alt="MYOB"
             onerror="this.src='https://logo.clearbit.com/myob.com'"
           />
         </div>
-        <div class="client-cell">
+        <div class="client-cell" data-reveal="zoom-in" data-delay="200">
           <img
             src="./ASSETS/images/client-2.png"
             alt="Belimo"
             onerror="this.src='https://logo.clearbit.com/belimo.com'"
           />
         </div>
-        <div class="client-cell">
+        <div class="client-cell" data-reveal="zoom-in" data-delay="300">
           <img
             src="./ASSETS/images/client-3.png"
             alt="LifeGroups"
             onerror="this.src='https://logo.clearbit.com/lifegroups.com'"
           />
         </div>
-        <div class="client-cell">
+        <div class="client-cell" data-reveal="zoom-in" data-delay="400">
           <img
             src="./ASSETS/images/client-4.png"
             alt="Grabyo"
@@ -331,28 +365,28 @@
         </div>
 
         <!-- Row 2 -->
-        <div class="client-cell">
+        <div class="client-cell" data-reveal="zoom-in" data-delay="200">
           <img
             src="./ASSETS/images/client-5.png"
             alt="Citrus"
             onerror="this.src='https://logo.clearbit.com/citrusad.com'"
           />
         </div>
-        <div class="client-cell">
+        <div class="client-cell" data-reveal="zoom-in" data-delay="300">
           <img
             src="./ASSETS/images/client-5.png"
             alt="Trustly"
             onerror="this.src='https://logo.clearbit.com/trustly.com'"
           />
         </div>
-        <div class="client-cell">
+        <div class="client-cell" data-reveal="zoom-in" data-delay="400">
           <img
             src="./ASSETS/images/client-6.png"
             alt="Oldendorff"
             onerror="this.src='https://logo.clearbit.com/oldendorff.com'"
           />
         </div>
-        <div class="client-cell">
+        <div class="client-cell" data-reveal="zoom-in" data-delay="500">
           <img
             src="./ASSETS/images/client-7.png"
             alt="Lilly"
@@ -364,6 +398,93 @@
     </div>
 
   </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="footer-inner">
+
+      <!-- Col 1: Logo + address + socials -->
+      <div class="footer-col footer-brand" data-reveal="fade-up" data-delay="100">
+        <a href="#" class="footer-logo">
+          <img src="./ASSETS/images/oppty.png" alt="Oppty Logo" />
+        </a>
+        <p class="footer-addr">
+          Oppty TechHub Private Limited<br />
+          Hyderabad, Telangana, India
+        </p>
+        <p class="footer-contact">
+          <span>Phone:</span> <a href="tel:+919491209900">+91 9491209900</a>
+        </p>
+        <p class="footer-contact">
+          <span>Email:</span> <a href="mailto:info@oppty.in">info@oppty.in</a>
+        </p>
+        <div class="footer-socials">
+          <!-- X / Twitter -->
+          <a href="#" aria-label="X">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L2.25 2.25h6.961l4.261 5.636 4.772-5.636zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <!-- Facebook -->
+          <a href="#" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.198 21.5h4v-8.01h3.604l.396-3.98h-4V7.5a1 1 0 0 1 1-1h3v-4h-3a5 5 0 0 0-5 5v2.01h-2l-.396 3.98h2.396v8.01z"/></svg>
+          </a>
+          <!-- Instagram -->
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <!-- LinkedIn -->
+          <a href="#" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Col 2: Useful Links -->
+      <div class="footer-col" data-reveal="fade-up" data-delay="250">
+        <h4 class="footer-heading">Useful Links</h4>
+        <ul class="footer-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Our Services -->
+      <div class="footer-col" data-reveal="fade-up" data-delay="400">
+        <h4 class="footer-heading">Our Services</h4>
+        <ul class="footer-links">
+          <li><a href="./HTML/it-services.html">IT Services</a></li>
+          <li><a href="./HTML/ites-services.html">ITES Services</a></li>
+          <li><a href="./HTML/bpo-services.html">BPO Services</a></li>
+          <li><a href="./HTML/oppty-learn.html">Oppty Learn</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Google Map -->
+      <div class="footer-col footer-map-col" data-reveal="fade-up" data-delay="550">
+        <h4 class="footer-heading">Find Us</h4>
+        <div class="footer-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.1965388409144!2d78.3327813758126!3d17.498128999604173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93d5ccaa5227%3A0xde534d4e3362e42b!2sOppty%20TechHub%20Private%20Limited!5e0!3m2!1sen!2sin!4v1781771371119!5m2!1sen!2sin"
+            width="100%"
+            height="200"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Oppty TechHub Location"
+          ></iframe>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="footer-bottom">
+      <p>© Copyright <strong>Oppty TechHub</strong> All Rights Reserved</p>
+    </div>
+  </footer>
 
   <script>
     // ── Mobile menu ──
@@ -377,6 +498,72 @@
       document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 40);
       document.getElementById('navbar').classList.toggle('past-hero', window.scrollY > heroH - 60);
     });
+
+    // ── Scroll-reveal (IntersectionObserver) ──
+    (function () {
+      const revealEls = document.querySelectorAll('[data-reveal]');
+
+      if (!('IntersectionObserver' in window)) {
+        // Fallback: reveal everything immediately
+        revealEls.forEach(el => el.classList.add('is-revealed'));
+        return;
+      }
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-revealed');
+            observer.unobserve(entry.target); // animate once only
+          }
+        });
+      }, {
+        threshold: 0.12,
+        rootMargin: '0px 0px -48px 0px'
+      });
+
+      revealEls.forEach(el => observer.observe(el));
+    })();
+
+    // ── Counter count-up animation ──
+    (function () {
+      const counters = document.querySelectorAll('.counter-num');
+      if (!counters.length) return;
+
+      function easeOutQuart(t) { return 1 - Math.pow(1 - t, 4); }
+
+      function animateCounter(el) {
+        const target   = parseInt(el.dataset.target, 10);
+        const suffix   = el.dataset.suffix || '';
+        const duration = 1800;
+        const start    = performance.now();
+
+        function tick(now) {
+          const progress = Math.min((now - start) / duration, 1);
+          const value    = Math.round(easeOutQuart(progress) * target);
+          const display  = target >= 1000
+            ? (value / 1000).toFixed(value % 1000 === 0 ? 0 : 1) + 'K'
+            : value;
+          el.textContent = display + (progress < 1 ? '' : suffix);
+          if (progress < 1) requestAnimationFrame(tick);
+          else el.textContent = (target >= 1000 ? (target / 1000) + 'K' : target) + suffix;
+        }
+        requestAnimationFrame(tick);
+      }
+
+      const counterSection = document.querySelector('.about-counters');
+      if (!counterSection) return;
+
+      let fired = false;
+      const counterObserver = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting && !fired) {
+          fired = true;
+          counters.forEach(el => animateCounter(el));
+          counterObserver.disconnect();
+        }
+      }, { threshold: 0.4 });
+
+      counterObserver.observe(counterSection);
+    })();
 
     // ── SLIDER DATA ──
     const slides = [
