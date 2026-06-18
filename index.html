@@ -731,110 +731,75 @@
   <!-- ── FOOTER ── -->
   <footer class="footer">
 
-    <!-- ── Animated SVG background ── -->
+    <!-- Background SVG -->
     <div class="footer-bg" aria-hidden="true">
-      <svg class="footer-bg-svg" viewBox="0 0 1440 520" preserveAspectRatio="xMidYMid slice"
-           xmlns="http://www.w3.org/2000/svg">
+      <svg class="footer-bg-svg" viewBox="0 0 1440 560" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <radialGradient id="fg-orange" cx="50%" cy="50%" r="50%">
-            <stop offset="0%"   stop-color="#f26522" stop-opacity="0.18"/>
+          <radialGradient id="fo1" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#f26522" stop-opacity="0.22"/>
             <stop offset="100%" stop-color="#f26522" stop-opacity="0"/>
           </radialGradient>
-          <radialGradient id="fg-blue" cx="50%" cy="50%" r="50%">
-            <stop offset="0%"   stop-color="#3b82f6" stop-opacity="0.12"/>
+          <radialGradient id="fo2" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.16"/>
             <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
           </radialGradient>
-          <radialGradient id="fg-purple" cx="50%" cy="50%" r="50%">
-            <stop offset="0%"   stop-color="#a855f7" stop-opacity="0.10"/>
+          <radialGradient id="fo3" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#a855f7" stop-opacity="0.14"/>
             <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
           </radialGradient>
-          <pattern id="ft-dots" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
-            <circle cx="1.5" cy="1.5" r="1.2" fill="rgba(255,255,255,0.045)"/>
+          <pattern id="fdots" x="0" y="0" width="28" height="28" patternUnits="userSpaceOnUse">
+            <circle cx="1.4" cy="1.4" r="1.1" fill="rgba(255,255,255,0.05)"/>
           </pattern>
         </defs>
-
-        <!-- Dot grid -->
-        <rect width="1440" height="520" fill="url(#ft-dots)"/>
-
-        <!-- Orbs -->
-        <ellipse class="ft-orb ft-orb--1" cx="120"  cy="80"  rx="280" ry="280" fill="url(#fg-orange)"/>
-        <ellipse class="ft-orb ft-orb--2" cx="1340" cy="440" rx="300" ry="300" fill="url(#fg-blue)"/>
-        <ellipse class="ft-orb ft-orb--3" cx="720"  cy="260" rx="200" ry="200" fill="url(#fg-purple)"/>
-
-        <!-- Wave shapes at top of footer (reversed) -->
-        <path class="ft-wave ft-wave--1"
-          d="M0,60 C240,20 480,90 720,55 C960,20 1200,80 1440,50 L1440,0 L0,0 Z"
-          fill="rgba(242,101,34,0.04)"/>
-        <path class="ft-wave ft-wave--2"
-          d="M0,40 C300,80 600,10 900,50 C1100,80 1280,30 1440,55 L1440,0 L0,0 Z"
-          fill="rgba(59,130,246,0.03)"/>
-
-        <!-- Dashed rotating rings -->
-        <circle class="ft-ring ft-ring--a" cx="200"  cy="440" r="110"
-          fill="none" stroke="rgba(242,101,34,0.10)" stroke-width="1" stroke-dasharray="10 7"/>
-        <circle class="ft-ring ft-ring--b" cx="1260" cy="80"  r="80"
-          fill="none" stroke="rgba(168,85,247,0.10)" stroke-width="1" stroke-dasharray="8 6"/>
-        <circle class="ft-ring ft-ring--c" cx="740"  cy="300" r="60"
-          fill="none" stroke="rgba(59,130,246,0.08)" stroke-width="1" stroke-dasharray="6 5"/>
-
-        <!-- Thin diagonal lines -->
-        <line x1="0"    y1="520" x2="460"  y2="0" stroke="rgba(242,101,34,0.045)" stroke-width="1"/>
-        <line x1="500"  y1="520" x2="980"  y2="0" stroke="rgba(59,130,246,0.04)"  stroke-width="1"/>
-        <line x1="1000" y1="520" x2="1440" y2="0" stroke="rgba(168,85,247,0.04)"  stroke-width="1"/>
+        <rect width="1440" height="560" fill="url(#fdots)"/>
+        <ellipse class="fo fo--1" cx="100"  cy="100" rx="340" ry="320" fill="url(#fo1)"/>
+        <ellipse class="fo fo--2" cx="1360" cy="460" rx="360" ry="340" fill="url(#fo2)"/>
+        <ellipse class="fo fo--3" cx="720"  cy="280" rx="260" ry="240" fill="url(#fo3)"/>
+        <circle class="fr fr--a" cx="180"  cy="460" r="130" fill="none" stroke="rgba(242,101,34,0.12)" stroke-width="1" stroke-dasharray="11 7"/>
+        <circle class="fr fr--b" cx="1280" cy="80"  r="95"  fill="none" stroke="rgba(168,85,247,0.12)" stroke-width="1" stroke-dasharray="9 6"/>
+        <circle class="fr fr--c" cx="720"  cy="280" r="68"  fill="none" stroke="rgba(59,130,246,0.09)"  stroke-width="1" stroke-dasharray="7 5"/>
+        <line x1="0"   y1="560" x2="480"  y2="0" stroke="rgba(242,101,34,0.05)" stroke-width="1"/>
+        <line x1="480" y1="560" x2="960"  y2="0" stroke="rgba(59,130,246,0.04)" stroke-width="1"/>
+        <line x1="960" y1="560" x2="1440" y2="0" stroke="rgba(168,85,247,0.04)" stroke-width="1"/>
       </svg>
-
-      <!-- Big ghost wordmark -->
       <span class="footer-watermark" aria-hidden="true">OPPTY</span>
     </div>
 
-    
+    <!-- Top gradient line -->
+    <div class="footer-topline"></div>
 
-    <!-- ── Divider ── -->
-    <div class="footer-divider"></div>
+    <!-- Main grid -->
+    <div class="footer-main">
 
-    <!-- ── Main grid ── -->
-    <div class="footer-inner">
-
-      <!-- Col 1: Brand -->
-      <div class="footer-col footer-brand" data-reveal="fade-up" data-delay="100">
-        <a href="#" class="footer-logo">
-          <img src="./ASSETS/images/oppty.png" alt="Oppty Logo" />
+      <!-- Brand -->
+      <div class="footer-brand" data-reveal="fade-up" data-delay="100">
+        <a href="#" class="footer-logo-wrap">
+          <div class="footer-logo-icon">
+            <img src="./ASSETS/images/oppty.png" alt="Oppty Logo"/>
+          </div>
+          <span class="footer-brand-name">Oppty</span>
         </a>
         <p class="footer-tagline">Future-Ready Technology.<br/>Powered by People.</p>
-        <p class="footer-addr">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z" fill="rgba(242,101,34,0.8)"/></svg>
-          Hyderabad, Telangana, India
-        </p>
-        <p class="footer-addr">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1H8c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57-.11.34-.03.74-.24 1.01L6.6 10.8z" fill="rgba(242,101,34,0.8)"/></svg>
-          <a href="tel:+919491209900">+91 9491209900</a>
-        </p>
-        <p class="footer-addr">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="rgba(242,101,34,0.8)"/></svg>
-          <a href="mailto:info@oppty.in">info@oppty.in</a>
-        </p>
-
-        <!-- Socials -->
-        <div class="footer-socials">
-          <!-- YouTube -->
-          <a href="https://youtube.com/@mroppty?si=NbpyNIM-vkHyeLYM" target="_blank" aria-label="YouTube" class="fsoc">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-          </a>
-          <a href="https://www.instagram.com/opptytech?igsh=YTExdTBsc3Y4ejU2" target="_blank" aria-label="Instagram" class="fsoc">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-          </a>
-          <a href="https://www.linkedin.com/company/opptytech/" target="_blank" aria-label="LinkedIn" class="fsoc">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
-          </a>
+        <div class="footer-contact-list">
+          <p class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z" fill="currentColor"/></svg>
+            Hyderabad, Telangana, India
+          </p>
+          <p class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1H8c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57-.11.34-.03.74-.24 1.01L6.6 10.8z" fill="currentColor"/></svg>
+            <a href="tel:+919491209900">+91 9491209900</a>
+          </p>
+          <p class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="currentColor"/></svg>
+            <a href="mailto:info@oppty.in">info@oppty.in</a>
+          </p>
         </div>
       </div>
 
-      <!-- Col 2: Useful Links -->
-      <div class="footer-col" data-reveal="fade-up" data-delay="200">
-        <h4 class="footer-heading">
-          <span class="fh-accent"></span>Quick Links
-        </h4>
-        <ul class="footer-links">
+      <!-- Quick Links -->
+      <div class="footer-col" data-reveal="fade-up" data-delay="180">
+        <h4 class="footer-col-heading">Quick Links</h4>
+        <ul class="footer-nav">
           <li><a href="#">Home</a></li>
           <li><a href="#">About Us</a></li>
           <li><a href="#">Services</a></li>
@@ -843,12 +808,10 @@
         </ul>
       </div>
 
-      <!-- Col 3: Our Services -->
-      <div class="footer-col" data-reveal="fade-up" data-delay="320">
-        <h4 class="footer-heading">
-          <span class="fh-accent"></span>Our Services
-        </h4>
-        <ul class="footer-links">
+      <!-- Our Services -->
+      <div class="footer-col" data-reveal="fade-up" data-delay="280">
+        <h4 class="footer-col-heading">Our Services</h4>
+        <ul class="footer-nav">
           <li><a href="./HTML/it-services.html">IT Services</a></li>
           <li><a href="./HTML/ites-services.html">ITES Services</a></li>
           <li><a href="./HTML/bpo-services.html">BPO Services</a></li>
@@ -856,36 +819,39 @@
         </ul>
       </div>
 
-      <!-- Col 4: Google Map -->
-      <div class="footer-col footer-map-col" data-reveal="fade-up" data-delay="440">
-        <h4 class="footer-heading">
-          <span class="fh-accent"></span>Find Us
-        </h4>
-        <div class="footer-map">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.1965388409144!2d78.3327813758126!3d17.498128999604173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93d5ccaa5227%3A0xde534d4e3362e42b!2sOppty%20TechHub%20Private%20Limited!5e0!3m2!1sen!2sin!4v1781771371119!5m2!1sen!2sin"
-            width="100%" height="190" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade" title="Oppty TechHub Location">
-          </iframe>
-        </div>
-        <!-- Business hours badge -->
-        <div class="footer-hours">
-          <span class="fh-dot"></span>
-          <span>Mon – Sat &nbsp;|&nbsp; 10:00 AM – 07:00 PM</span>
-        </div>
+      <!-- Company -->
+      <div class="footer-col" data-reveal="fade-up" data-delay="360">
+        <h4 class="footer-col-heading">Company</h4>
+        <ul class="footer-nav">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
       </div>
 
     </div>
 
-    <!-- ── Bottom bar ── -->
+    <!-- Mid divider -->
+    <div class="footer-mid-divider"></div>
+
+    <!-- Bottom bar -->
     <div class="footer-bottom">
-      <p class="fb-copy">© 2025 <strong>Oppty TechHub Private Limited</strong>. All Rights Reserved.</p>
-      <div class="fb-badges">
-        <span>Privacy Policy</span>
-        <span class="fb-dot-sep">·</span>
-        <span>Terms of Service</span>
-        <span class="fb-dot-sep">·</span>
-        <span>Sitemap</span>
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/company/opptytech/" target="_blank" aria-label="LinkedIn" class="fsoc">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="https://www.instagram.com/opptytech" target="_blank" aria-label="Instagram" class="fsoc">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://youtube.com/@mroppty" target="_blank" aria-label="YouTube" class="fsoc">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </a>
+      </div>
+      <p class="footer-copy">&copy; Copyright 2025 <strong>Oppty TechHub</strong>. All Rights Reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Terms of Service</a>
+        <span class="fl-sep">&middot;</span>
+        <a href="#">Privacy Policy</a>
       </div>
     </div>
 
