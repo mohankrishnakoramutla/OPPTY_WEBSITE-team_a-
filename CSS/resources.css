@@ -4,7 +4,7 @@
 ══════════════════════════════════════════ */
 
 body { background: #080a0e; color: #fff; }
-.rs-nav-active { color: var(--white) !important; }
+.rs-nav-active { }
 
 /* ── Shared tokens ── */
 .rs-eyebrow {
@@ -58,7 +58,7 @@ body { background: #080a0e; color: #fff; }
 .rs-hero {
   position: relative; min-height: 60vh;
   display: flex; align-items: center; justify-content: center;
-  text-align: center; overflow: hidden;
+  text-align: center; overflow: visible;
   padding: 150px 24px 90px;
 }
 .rs-hero__img {
@@ -415,3 +415,4 @@ body { background: #080a0e; color: #fff; }
   .rs-featured__inner { padding: 0 18px; }
   .rs-search-strip__inner { padding: 0 18px; }
 }
+

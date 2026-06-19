@@ -6,9 +6,6 @@
 /* Shared page background */
 body { background: #ffffff; color: #1a1a1a; }
 
-/* Active nav link */
-.nav-active { color: var(--white) !important; }
-
 /* ─────────────────────────────────────
    SHARED TYPOGRAPHY HELPERS
 ───────────────────────────────────── */
@@ -49,7 +46,7 @@ body { background: #ffffff; color: #1a1a1a; }
   align-items: center;
   justify-content: center;
   padding: 140px 24px 110px;
-  overflow: hidden;
+  overflow: visible;
   text-align: center;
 }
 
@@ -1313,3 +1310,4 @@ body { background: #ffffff; color: #1a1a1a; }
   .ab-contact__title { letter-spacing: -1.5px; }
   .ab-cf-btn { width: 100%; justify-content: center; }
 }
+

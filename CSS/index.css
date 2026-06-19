@@ -144,7 +144,7 @@ header.scrolled .nav-inner { height: var(--nav-h-sm); }
 .logo-img {
   height: 36px;
   width: auto;
-  max-width: 150px;
+  max-width: 150px;   
   display: block;
   border: none;
   border-radius: 0;
@@ -182,27 +182,24 @@ nav a::after {
 }
 nav a:hover { color: var(--white); }
 nav a:hover::after { width: 100%; }
-/* Active = orange underline always visible (works with all active class variants) */
+
+/* Active = orange underline always visible */
 nav a.active::after,
 nav a.nav-active::after,
 nav a.ct-nav-active::after,
-nav a.rs-nav-active::after { width: 100%; }
+nav a.rs-nav-active::after {
+  width: 100%;
+  background: var(--orange);
+}
 
-/* past-hero: active keeps same color as other links, only underline shows */
+/* past-hero: active underline stays orange */
 header.past-hero nav a.active::after,
 header.past-hero nav a.nav-active::after,
 header.past-hero nav a.ct-nav-active::after,
-header.past-hero nav a.rs-nav-active::after { width: 100%; background: var(--orange); }
-
-/* Force active text to stay white — never turn orange */
-nav a.active,
-nav a.nav-active,
-nav a.ct-nav-active,
-nav a.rs-nav-active,
-header.past-hero nav a.active,
-header.past-hero nav a.nav-active,
-header.past-hero nav a.ct-nav-active,
-header.past-hero nav a.rs-nav-active { color: rgba(255,255,255,0.7); }
+header.past-hero nav a.rs-nav-active::after {
+  width: 100%;
+  background: var(--orange);
+}
 
 nav a.active:hover,
 nav a.nav-active:hover,

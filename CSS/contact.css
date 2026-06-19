@@ -9,7 +9,7 @@
 body { background: #080a0e; color: #fff; }
 
 /* Active nav link */
-.ct-nav-active { color: var(--white) !important; }
+.ct-nav-active { }
 
 /* ─────────────────────────────────────────────
    HERO
@@ -20,7 +20,7 @@ body { background: #080a0e; color: #fff; }
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  overflow: visible;
   text-align: center;
   padding: 140px 24px 80px;
 }
@@ -363,3 +363,4 @@ body { background: #080a0e; color: #fff; }
   .ct-offices__inner { padding: 0 18px; }
   .ct-hero { padding: 120px 16px 64px; }
 }
+
