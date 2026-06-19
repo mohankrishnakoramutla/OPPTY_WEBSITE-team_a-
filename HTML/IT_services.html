@@ -886,6 +886,27 @@
       if (!isOpen) dropdown.classList.add('open');
     }
 
+    // -- Service dropdown item selection --
+    (function() {
+      document.querySelectorAll('.nav-dropdown__menu li a').forEach(function(item) {
+        item.addEventListener('click', function(e) {
+          var dropdown = this.closest('.nav-dropdown');
+          var toggle = dropdown.querySelector('.nav-dropdown__toggle');
+          var labelEl = this.querySelector('.dd-label');
+          var label = labelEl ? labelEl.textContent.trim() : this.textContent.trim();
+          // Update toggle text node
+          toggle.childNodes.forEach(function(node) {
+            if (node.nodeType === 3) node.textContent = label + ' ';
+          });
+          // Mark selected
+          dropdown.querySelectorAll('.nav-dropdown__menu li a').forEach(function(a) { a.classList.remove('dd-selected'); });
+          this.classList.add('dd-selected');
+          toggle.classList.add('nav-active');
+          dropdown.classList.remove('open');
+        });
+      });
+    })();
+
     // Close desktop dropdown when clicking outside
     document.addEventListener('click', function(e) {
       if (!e.target.closest('.nav-dropdown')) {
@@ -906,4 +927,5 @@
 
 </body>
 </html>
+
 

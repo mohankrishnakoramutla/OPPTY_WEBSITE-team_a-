@@ -7,7 +7,7 @@
 body { background: #ffffff; color: #1a1a1a; }
 
 /* Active nav link */
-.nav-active { color: var(--orange) !important; }
+.nav-active { color: var(--white) !important; }
 
 /* ─────────────────────────────────────
    SHARED TYPOGRAPHY HELPERS

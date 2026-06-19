@@ -58,6 +58,8 @@
       </div>
       <button class="hamburger" aria-label="Toggle menu" onclick="toggleMenu()"><span></span><span></span><span></span></button>
     </div>
+
+    <!-- Mobile Nav -->
     <div class="mobile-nav" id="mobileNav">
       <a href="../index.html">Home</a>
       <a href="about.html">About Us</a>
@@ -82,10 +84,10 @@
   </header>
 
   <!-- ══════════════════════════════════
-       HERO — dark cinematic
+       HERO
   ═══════════════════════════════════ -->
   <section class="rs-hero">
-    <div class="rs-hero__img"  aria-hidden="true"></div>
+    <div class="rs-hero__img" aria-hidden="true"></div>
     <div class="rs-hero__overlay" aria-hidden="true"></div>
     <div class="rs-hero__mesh" aria-hidden="true">
       <svg viewBox="0 0 1440 560" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
@@ -99,10 +101,10 @@
         <rect width="1440" height="560" fill="url(#rs-dot)"/>
         <ellipse class="rs-orb rs-orb--1" cx="140"  cy="280" rx="520" ry="440" fill="url(#rs-g1)"/>
         <ellipse class="rs-orb rs-orb--2" cx="1300" cy="280" rx="500" ry="420" fill="url(#rs-g2)"/>
-        <circle class="rs-ring"          cx="1360" cy="90"  r="115" fill="none" stroke="rgba(242,101,34,0.15)" stroke-width="1.2" stroke-dasharray="11 8"/>
-        <circle class="rs-ring rs-ring--rev" cx="80" cy="470" r="85"  fill="none" stroke="rgba(59,130,246,0.13)"  stroke-width="1"   stroke-dasharray="8 6"/>
-        <line x1="0"    y1="560" x2="500"  y2="0" stroke="rgba(242,101,34,0.06)" stroke-width="1"/>
-        <line x1="940"  y1="560" x2="1440" y2="0" stroke="rgba(59,130,246,0.05)"  stroke-width="1"/>
+        <circle class="rs-ring"              cx="1360" cy="90"  r="115" fill="none" stroke="rgba(242,101,34,0.15)" stroke-width="1.2" stroke-dasharray="11 8"/>
+        <circle class="rs-ring rs-ring--rev" cx="80"   cy="470" r="85"  fill="none" stroke="rgba(59,130,246,0.13)"  stroke-width="1"   stroke-dasharray="8 6"/>
+        <line x1="0"   y1="560" x2="500"  y2="0" stroke="rgba(242,101,34,0.06)" stroke-width="1"/>
+        <line x1="940" y1="560" x2="1440" y2="0" stroke="rgba(59,130,246,0.05)"  stroke-width="1"/>
       </svg>
     </div>
     <div class="rs-hero__content">
@@ -118,27 +120,25 @@
       <p class="rs-hero__sub">
         Guides, case studies, whitepapers, and insights curated by the Oppty TechHub team — everything you need to make smarter technology decisions.
       </p>
-      <!-- Search bar -->
       <div class="rs-hero__search">
         <svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="1.8"/><path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-        <input type="text" placeholder="Search guides, case studies, whitepapers..." aria-label="Search resources"/>
-        <button type="button">Search</button>
+        <input type="text" id="heroSearch" placeholder="Search guides, case studies, whitepapers..." aria-label="Search resources"/>
+        <button type="button" onclick="handleHeroSearch()">Search</button>
       </div>
     </div>
   </section>
 
   <!-- ══════════════════════════════════
-       FEATURED RESOURCE — split layout
+       FEATURED RESOURCE
   ═══════════════════════════════════ -->
   <section class="rs-featured">
     <div class="rs-featured__inner">
-      <!-- Left text -->
       <div class="rs-featured__text">
         <span class="rs-tag rs-tag--orange">Featured Guide</span>
         <h2 class="rs-featured__title">Digital Transformation<br/>for Modern Enterprises</h2>
         <p class="rs-featured__body">Discover how Oppty TechHub's integrated approach to IT, ITES, and BPO helps organisations accelerate digital transformation — reducing costs, improving agility, and unlocking new growth opportunities.</p>
         <ul class="rs-featured__bullets">
-          <li><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#4caf7d" stroke-width="1.5"/><path d="M6 10l3 3 5-5" stroke="#4caf7d" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Cloud migration & infrastructure modernisation</li>
+          <li><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#4caf7d" stroke-width="1.5"/><path d="M6 10l3 3 5-5" stroke="#4caf7d" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Cloud migration &amp; infrastructure modernisation</li>
           <li><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#4caf7d" stroke-width="1.5"/><path d="M6 10l3 3 5-5" stroke="#4caf7d" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Intelligent process automation strategies</li>
           <li><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#4caf7d" stroke-width="1.5"/><path d="M6 10l3 3 5-5" stroke="#4caf7d" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Workforce upskilling with Oppty Learn</li>
         </ul>
@@ -147,7 +147,6 @@
           <a href="contact.html" class="rs-btn rs-btn--ghost">Schedule Demo</a>
         </div>
       </div>
-      <!-- Right: YouTube-style embed mockup -->
       <div class="rs-featured__media">
         <div class="rs-featured__video-wrap">
           <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80" alt="Digital Transformation Overview"/>
@@ -166,7 +165,7 @@
   </section>
 
   <!-- ══════════════════════════════════
-       TABBED CATEGORIES + CARDS
+       TABBED RESOURCE LIBRARY
   ═══════════════════════════════════ -->
   <section class="rs-library">
     <div class="rs-library__inner">
@@ -190,7 +189,6 @@
       <!-- Cards grid -->
       <div class="rs-cards" id="rsCards">
 
-        <!-- Card 1 -->
         <article class="rs-card" data-type="guide">
           <div class="rs-card__img" style="background-image:url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=75')">
             <span class="rs-card__badge rs-card__badge--orange">Guide</span>
@@ -203,7 +201,6 @@
           </div>
         </article>
 
-        <!-- Card 2 -->
         <article class="rs-card" data-type="casestudy">
           <div class="rs-card__img" style="background-image:url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=75')">
             <span class="rs-card__badge rs-card__badge--blue">Case Study</span>
@@ -216,7 +213,6 @@
           </div>
         </article>
 
-        <!-- Card 3 -->
         <article class="rs-card" data-type="whitepaper">
           <div class="rs-card__img" style="background-image:url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=75')">
             <span class="rs-card__badge rs-card__badge--purple">Whitepaper</span>
@@ -229,7 +225,6 @@
           </div>
         </article>
 
-        <!-- Card 4 -->
         <article class="rs-card" data-type="webinar">
           <div class="rs-card__img" style="background-image:url('https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=600&q=75')">
             <span class="rs-card__badge rs-card__badge--green">Webinar</span>
@@ -243,7 +238,6 @@
           </div>
         </article>
 
-        <!-- Card 5 -->
         <article class="rs-card" data-type="blog">
           <div class="rs-card__img" style="background-image:url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=75')">
             <span class="rs-card__badge rs-card__badge--orange">Blog Post</span>
@@ -256,7 +250,6 @@
           </div>
         </article>
 
-        <!-- Card 6 -->
         <article class="rs-card" data-type="guide">
           <div class="rs-card__img" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=75')">
             <span class="rs-card__badge rs-card__badge--blue">Guide</span>
@@ -279,18 +272,16 @@
   </section>
 
   <!-- ══════════════════════════════════
-       ADVANCED SEARCH DEMO STRIP
+       SEARCH STRIP
   ═══════════════════════════════════ -->
   <section class="rs-search-strip">
     <div class="rs-search-strip__inner">
-      <!-- Left text -->
       <div class="rs-search-strip__text">
         <span class="rs-tag rs-tag--blue">Smart Search</span>
         <h2 class="rs-search-strip__title">Advanced search built for IT &amp; business teams</h2>
         <p class="rs-search-strip__body">Can't find what you need? Our smart resource finder lets you filter by service area, content type, and reading time — so the right insight reaches you instantly.</p>
         <a href="contact.html" class="rs-btn rs-btn--primary">Explore All Resources <svg viewBox="0 0 20 20" fill="none"><path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
-      <!-- Right: filter card mockup -->
       <div class="rs-search-strip__card">
         <div class="rs-filter-card">
           <div class="rs-filter-card__top">
@@ -352,17 +343,19 @@
           <pattern id="fdots-rs" x="0" y="0" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="1.4" cy="1.4" r="1.1" fill="rgba(255,255,255,0.05)"/></pattern>
         </defs>
         <rect width="1440" height="560" fill="url(#fdots-rs)"/>
-        <ellipse class="fo fo--1" cx="100" cy="100" rx="340" ry="320" fill="url(#fo1-rs)"/>
+        <ellipse class="fo fo--1" cx="100"  cy="100" rx="340" ry="320" fill="url(#fo1-rs)"/>
         <ellipse class="fo fo--2" cx="1360" cy="460" rx="360" ry="340" fill="url(#fo2-rs)"/>
-        <ellipse class="fo fo--3" cx="720" cy="280" rx="260" ry="240" fill="url(#fo3-rs)"/>
-        <circle class="fr fr--a" cx="180" cy="460" r="130" fill="none" stroke="rgba(242,101,34,0.12)" stroke-width="1" stroke-dasharray="11 7"/>
-        <circle class="fr fr--b" cx="1280" cy="80" r="95" fill="none" stroke="rgba(168,85,247,0.12)" stroke-width="1" stroke-dasharray="9 6"/>
+        <ellipse class="fo fo--3" cx="720"  cy="280" rx="260" ry="240" fill="url(#fo3-rs)"/>
+        <circle class="fr fr--a" cx="180"  cy="460" r="130" fill="none" stroke="rgba(242,101,34,0.12)" stroke-width="1" stroke-dasharray="11 7"/>
+        <circle class="fr fr--b" cx="1280" cy="80"  r="95"  fill="none" stroke="rgba(168,85,247,0.12)"  stroke-width="1" stroke-dasharray="9 6"/>
       </svg>
     </div>
     <div class="footer-topline"></div>
     <div class="footer-main">
       <div class="footer-brand">
-        <a href="../index.html" class="footer-logo-wrap"><div class="footer-logo-icon"><img src="../ASSETS/images/oppty.png" alt="Oppty"/></div></a>
+        <a href="../index.html" class="footer-logo-wrap">
+          <div class="footer-logo-icon"><img src="../ASSETS/images/oppty.png" alt="Oppty"/></div>
+        </a>
         <p class="footer-tagline">Future-Ready Technology.<br/>Powered by People.</p>
         <div class="footer-contact-list">
           <p class="footer-contact-item"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z" fill="currentColor"/></svg>Hyderabad, Telangana, India</p>
@@ -370,9 +363,34 @@
           <p class="footer-contact-item"><svg viewBox="0 0 24 24" fill="none"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="currentColor"/></svg><a href="mailto:info@oppty.in">info@oppty.in</a></p>
         </div>
       </div>
-      <div class="footer-col"><h4 class="footer-col-heading">Quick Links</h4><ul class="footer-nav"><li><a href="../index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="resources.html">Resources</a></li><li><a href="#">Careers</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
-      <div class="footer-col"><h4 class="footer-col-heading">Our Services</h4><ul class="footer-nav"><li><a href="IT_services.html">IT Services</a></li><li><a href="ITES_services.html">ITES Services</a></li><li><a href="BPO.html">BPO Services</a></li><li><a href="Oppty_learn.html">Oppty Learn</a></li></ul></div>
-      <div class="footer-col"><h4 class="footer-col-heading">Company</h4><ul class="footer-nav"><li><a href="about.html">About Us</a></li><li><a href="resources.html">Resources</a></li><li><a href="#">Blog</a></li><li><a href="#">Careers</a></li></ul></div>
+      <div class="footer-col">
+        <h4 class="footer-col-heading">Quick Links</h4>
+        <ul class="footer-nav">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-heading">Our Services</h4>
+        <ul class="footer-nav">
+          <li><a href="IT_services.html">IT Services</a></li>
+          <li><a href="ITES_services.html">ITES Services</a></li>
+          <li><a href="BPO.html">BPO Services</a></li>
+          <li><a href="Oppty_learn.html">Oppty Learn</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-heading">Company</h4>
+        <ul class="footer-nav">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
     </div>
     <div class="footer-mid-divider"></div>
     <div class="footer-bottom">
@@ -382,48 +400,116 @@
         <a href="https://youtube.com/@mroppty" target="_blank" aria-label="YouTube" class="fsoc"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
       </div>
       <p class="footer-copy">&copy; Copyright 2025 <strong>Oppty TechHub</strong>. All Rights Reserved.</p>
-      <div class="footer-legal"><a href="#">Terms of Service</a><span class="fl-sep">&middot;</span><a href="#">Privacy Policy</a></div>
-        </div>
+      <div class="footer-legal">
+        <a href="#">Terms of Service</a>
+        <span class="fl-sep">&middot;</span>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
     <div class="footer-watermark" aria-hidden="true">OPPTY</div>
   </footer>
 
+  <!-- ══════════════════════════════════
+       SCRIPTS — clean, no duplicates
+  ═══════════════════════════════════ -->
   <script>
-    // ── Navbar scroll + past-hero ──
-    const navbar = document.getElementById('navbar');
-    const heroSection = document.querySelector('section');
-    window.addEventListener('scroll', () => {
-      const heroH = heroSection ? heroSection.offsetHeight : 0;
-      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    // 1. Navbar scroll behaviour
+    var navbar      = document.getElementById('navbar');
+    var heroSection = document.querySelector('.rs-hero');
+
+    window.addEventListener('scroll', function () {
+      var heroH = heroSection ? heroSection.offsetHeight : 0;
+      navbar.classList.toggle('scrolled',  window.scrollY > 40);
       navbar.classList.toggle('past-hero', window.scrollY > heroH - 60);
     });
-    function toggleMenu() { document.getElementById('mobileNav').classList.toggle('open'); }
+
+    // 2. Mobile hamburger
+    function toggleMenu() {
+      document.getElementById('mobileNav').classList.toggle('open');
+    }
+
+    // 3. Desktop dropdown toggle
     function toggleNavDropdown(el) {
-      const dd = el.closest('.nav-dropdown');
-      document.querySelectorAll('.nav-dropdown').forEach(d => { if(d!==dd) d.classList.remove('open'); });
+      var dd = el.closest('.nav-dropdown');
+      document.querySelectorAll('.nav-dropdown').forEach(function (d) {
+        if (d !== dd) {
+          d.classList.remove('open');
+        }
+      });
       dd.classList.toggle('open');
     }
-    document.addEventListener('click', e => {
-      if(!e.target.closest('.nav-dropdown')) document.querySelectorAll('.nav-dropdown').forEach(d=>d.classList.remove('open'));
+
+    // 4. Close desktop dropdown on outside click
+    document.addEventListener('click', function (e) {
+      if (!e.target.closest('.nav-dropdown')) {
+        document.querySelectorAll('.nav-dropdown').forEach(function (d) {
+          d.classList.remove('open');
+        });
+      }
     });
+
+    // 5. Mobile dropdown toggle
     function toggleMobileDropdown(btn) {
-      const expanded = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', !expanded);
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
       btn.closest('.mobile-dropdown').classList.toggle('open');
     }
-    // Tab filter
-    document.querySelectorAll('.rs-tab').forEach(tab => {
-      tab.addEventListener('click', function() {
-        document.querySelectorAll('.rs-tab').forEach(t => t.classList.remove('active'));
+
+    // 6. Resource tab filter
+    document.querySelectorAll('.rs-tab').forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        document.querySelectorAll('.rs-tab').forEach(function (t) {
+          t.classList.remove('active');
+        });
         this.classList.add('active');
-        const filter = this.dataset.tab;
-        document.querySelectorAll('.rs-card').forEach(card => {
-          card.style.display = (filter === 'all' || card.dataset.type === filter) ? '' : 'none';
+        var filter = this.getAttribute('data-tab');
+        document.querySelectorAll('.rs-card').forEach(function (card) {
+          if (filter === 'all' || card.getAttribute('data-type') === filter) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
         });
       });
     });
+
+    // 7. Hero search button
+    function handleHeroSearch() {
+      var query = document.getElementById('heroSearch').value.trim().toLowerCase();
+      if (!query) {
+        document.querySelectorAll('.rs-card').forEach(function (c) {
+          c.style.display = '';
+        });
+        return;
+      }
+      var section = document.querySelector('.rs-library');
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+      document.querySelectorAll('.rs-card').forEach(function (card) {
+        var text = card.innerText.toLowerCase();
+        card.style.display = text.includes(query) ? '' : 'none';
+      });
+      // Reset active tab to "All"
+      document.querySelectorAll('.rs-tab').forEach(function (t) {
+        t.classList.remove('active');
+      });
+      var allTab = document.querySelector('.rs-tab[data-tab="all"]');
+      if (allTab) {
+        allTab.classList.add('active');
+      }
+    }
+
+    // Also trigger hero search on Enter key
+    var heroSearchInput = document.getElementById('heroSearch');
+    if (heroSearchInput) {
+      heroSearchInput.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') {
+          handleHeroSearch();
+        }
+      });
+    }
   </script>
+
 </body>
 </html>
-
-
-
