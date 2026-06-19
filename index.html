@@ -991,6 +991,28 @@
   </footer>
 
   <script>
+    // ── Set active nav link ──
+    (function() {
+      const path = window.location.pathname;
+      document.querySelectorAll('nav a').forEach(a => {
+        const href = a.getAttribute('href') || '';
+        if (
+          (path === '/' || path.endsWith('index.html')) && (href === '#' || href === '../index.html' || href.endsWith('index.html')) && a.textContent.trim() === 'Home'
+          || path.includes('about') && a.textContent.trim() === 'About Us'
+          || path.includes('contact') && a.textContent.trim() === 'Contact Us'
+          || path.includes('resources') && a.textContent.trim() === 'Resources'
+          || (path.includes('IT_services') || path.includes('ITES_services') || path.includes('BPO') || path.includes('Oppty_learn')) && a.classList.contains('nav-dropdown__toggle')
+        ) {
+          a.classList.add('active');
+        }
+      });
+      // Mark Home active on index page
+      if (path === '/' || path.endsWith('index.html')) {
+        const homeLink = document.querySelector('nav a[href="#"]:first-of-type, nav a[href="../index.html"]');
+        if (homeLink && homeLink.textContent.trim() === 'Home') homeLink.classList.add('active');
+      }
+    })();
+
     // ── Mobile menu ──
     function toggleMenu() {
       document.getElementById('mobileNav').classList.toggle('open');

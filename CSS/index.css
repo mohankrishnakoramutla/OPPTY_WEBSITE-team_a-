@@ -182,6 +182,36 @@ nav a::after {
 }
 nav a:hover { color: var(--white); }
 nav a:hover::after { width: 100%; }
+/* Active = orange underline always visible (works with all active class variants) */
+nav a.active::after,
+nav a.nav-active::after,
+nav a.ct-nav-active::after,
+nav a.rs-nav-active::after { width: 100%; }
+
+/* past-hero: active keeps same color as other links, only underline shows */
+header.past-hero nav a.active::after,
+header.past-hero nav a.nav-active::after,
+header.past-hero nav a.ct-nav-active::after,
+header.past-hero nav a.rs-nav-active::after { width: 100%; background: var(--orange); }
+
+/* Force active text to stay white — never turn orange */
+nav a.active,
+nav a.nav-active,
+nav a.ct-nav-active,
+nav a.rs-nav-active,
+header.past-hero nav a.active,
+header.past-hero nav a.nav-active,
+header.past-hero nav a.ct-nav-active,
+header.past-hero nav a.rs-nav-active { color: rgba(255,255,255,0.7); }
+
+nav a.active:hover,
+nav a.nav-active:hover,
+nav a.ct-nav-active:hover,
+nav a.rs-nav-active:hover { color: #fff; }
+
+/* Dropdown toggle active underline */
+.nav-dropdown__toggle.active::after,
+.nav-dropdown__toggle.nav-active::after { width: calc(100% - 18px); }
 
 /* Nav text turns orange after hero */
 header.past-hero nav a {
@@ -2199,19 +2229,23 @@ header.past-hero .phone-link:hover {
 }
 
 .nav-dropdown.open .nav-dropdown__toggle,
-.nav-dropdown__toggle:hover {
+.nav-dropdown__toggle:hover,
+.nav-dropdown__toggle.active {
   color: var(--white);
 }
 
-.nav-dropdown.open .nav-dropdown__toggle::after {
-  width: calc(100% - 18px); /* excludes arrow width */
+.nav-dropdown.open .nav-dropdown__toggle::after,
+.nav-dropdown__toggle.active::after {
+  width: calc(100% - 18px);
 }
 
+/* past-hero: keep text orange, underline stays */
 header.past-hero .nav-dropdown__toggle {
   color: var(--orange);
 }
-header.past-hero .nav-dropdown.open .nav-dropdown__toggle {
-  color: #d4530e;
+header.past-hero .nav-dropdown.open .nav-dropdown__toggle,
+header.past-hero .nav-dropdown__toggle.active {
+  color: var(--orange);
 }
 
 /* Arrow icon */

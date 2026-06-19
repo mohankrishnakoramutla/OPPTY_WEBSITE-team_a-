@@ -2564,11 +2564,13 @@ header.past-hero .phone-link:hover {
 }
 
 .nav-dropdown.open .nav-dropdown__toggle,
-.nav-dropdown__toggle:hover {
+.nav-dropdown__toggle:hover,
+.nav-dropdown__toggle.active {
     color: #fff;
 }
 
-.nav-dropdown.open .nav-dropdown__toggle::after {
+.nav-dropdown.open .nav-dropdown__toggle::after,
+.nav-dropdown__toggle.active::after {
     width: calc(100% - 18px);
 }
 
@@ -3138,3 +3140,4 @@ header.past-hero .nav-dropdown.open .nav-dropdown__toggle {
         font-size: clamp(80px, 22vw, 160px);
     }
 }
+

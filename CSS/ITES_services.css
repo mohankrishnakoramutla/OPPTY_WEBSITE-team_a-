@@ -1919,18 +1919,15 @@ section .btn-ghost:hover {
     align-items: center;
     justify-content: center;
     border-radius: var(--r-lg);
-    color: var(--white);
-    box-shadow: var(--shadow-glow);
+    background: transparent;
+    box-shadow: none;
 }
 
-.orbit-logo i {
-    font-size: 1.5rem;
-}
-
-.orbit-logo span {
-    font-size: 0.7rem;
-    font-weight: 700;
-    margin-top: 2px;
+.orbit-logo-img {
+    width: 72px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 16px rgba(242,101,34,0.45));
 }
 
 .orbit-ring {
@@ -2483,11 +2480,13 @@ header.past-hero .phone-link:hover {
 }
 
 .nav-dropdown.open .nav-dropdown__toggle,
-.nav-dropdown__toggle:hover {
+.nav-dropdown__toggle:hover,
+.nav-dropdown__toggle.active {
     color: #fff;
 }
 
-.nav-dropdown.open .nav-dropdown__toggle::after {
+.nav-dropdown.open .nav-dropdown__toggle::after,
+.nav-dropdown__toggle.active::after {
     width: calc(100% - 18px);
 }
 
@@ -3057,3 +3056,4 @@ header.past-hero .nav-dropdown.open .nav-dropdown__toggle {
         font-size: clamp(80px, 22vw, 160px);
     }
 }
+

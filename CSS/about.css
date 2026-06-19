@@ -850,7 +850,7 @@ body { background: #ffffff; color: #1a1a1a; }
   .ab-offer__inner { padding: 0 18px; }
   .ab-offer__card  { padding: 40px 24px 36px; }
 }
-}
+
 
 @media (max-width: 560px) {
   .ab-offer__grid { grid-template-columns: 1fr; }

@@ -331,11 +331,13 @@ header.past-hero .phone-link:hover {
 }
 
 .nav-dropdown.open .nav-dropdown__toggle,
-.nav-dropdown__toggle:hover {
+.nav-dropdown__toggle:hover,
+.nav-dropdown__toggle.active {
   color: var(--white);
 }
 
-.nav-dropdown.open .nav-dropdown__toggle::after {
+.nav-dropdown.open .nav-dropdown__toggle::after,
+.nav-dropdown__toggle.active::after {
   width: calc(100% - 18px);
 }
 
@@ -2026,3 +2028,4 @@ section {
   justify-content: center;
   flex-wrap: wrap;
 }
+
