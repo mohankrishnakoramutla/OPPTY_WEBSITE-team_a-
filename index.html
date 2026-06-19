@@ -42,9 +42,41 @@
       <nav>
         <a href="#">Home</a>
         <a href="#">About Us</a>
-        <a href="#">Our Services</a>
+        <div class="nav-dropdown">
+          <a href="#" class="nav-dropdown__toggle" onclick="toggleNavDropdown(this); return false;">Our Services
+            <svg class="nav-dropdown__arrow" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <ul class="nav-dropdown__menu">
+            <li><a href="./HTML/it-services.html">
+              <span class="dd-icon dd-icon--blue">
+                <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              </span>
+              <span class="dd-label">IT Services</span>
+            </a></li>
+            <li><a href="./HTML/ites-services.html">
+              <span class="dd-icon dd-icon--orange">
+                <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6"/><path d="M6.3 6.3a8 8 0 0 0 0 11.4M17.7 6.3a8 8 0 0 1 0 11.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              </span>
+              <span class="dd-label">ITES Services</span>
+            </a></li>
+            <li><a href="./HTML/bpo-services.html">
+              <span class="dd-icon dd-icon--green">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="1.6"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              </span>
+              <span class="dd-label">BPO Services</span>
+            </a></li>
+            <li><a href="./HTML/oppty-learn.html">
+              <span class="dd-icon dd-icon--purple">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M12 3L2 8l10 5 10-5-10-5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <span class="dd-label">Oppty Learn</span>
+            </a></li>
+          </ul>
+        </div>
+        <a href="#">Resources</a>
         <a href="#">Contact Us</a>
-        <a href="#">Careers</a>
       </nav>
 
       <div class="nav-actions">
@@ -66,7 +98,20 @@
     <div class="mobile-nav" id="mobileNav">
       <a href="#">Home</a>
       <a href="#">About Us</a>
-      <a href="#">Our Services</a>
+      <div class="mobile-dropdown">
+        <button class="mobile-dropdown__toggle" onclick="toggleMobileDropdown(this)" aria-expanded="false">
+          Our Services
+          <svg class="mobile-dropdown__arrow" viewBox="0 0 10 6" fill="none">
+            <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <ul class="mobile-dropdown__menu">
+          <li><a href="./HTML/it-services.html">IT Services</a></li>
+          <li><a href="./HTML/ites-services.html">ITES Services</a></li>
+          <li><a href="./HTML/bpo-services.html">BPO Services</a></li>
+          <li><a href="./HTML/oppty-learn.html">Oppty Learn</a></li>
+        </ul>
+      </div>
       <a href="#">Contact Us</a>
       <a href="#">Careers</a>
       <div class="mobile-btns">
@@ -950,6 +995,29 @@
     function toggleMenu() {
       document.getElementById('mobileNav').classList.toggle('open');
     }
+
+    // ── Mobile dropdown ──
+    function toggleMobileDropdown(btn) {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', !expanded);
+      btn.closest('.mobile-dropdown').classList.toggle('open');
+    }
+
+    // ── Desktop nav dropdown (click) ──
+    function toggleNavDropdown(toggle) {
+      const dropdown = toggle.closest('.nav-dropdown');
+      const isOpen = dropdown.classList.contains('open');
+      // Close any other open dropdowns first
+      document.querySelectorAll('.nav-dropdown.open').forEach(d => d.classList.remove('open'));
+      if (!isOpen) dropdown.classList.add('open');
+    }
+
+    // Close desktop dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.nav-dropdown')) {
+        document.querySelectorAll('.nav-dropdown.open').forEach(d => d.classList.remove('open'));
+      }
+    });
 
     // ── Navbar scroll ──
     window.addEventListener('scroll', () => {
