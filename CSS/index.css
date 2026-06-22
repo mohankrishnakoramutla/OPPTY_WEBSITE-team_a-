@@ -2532,23 +2532,31 @@ header.past-hero .nav-dropdown__toggle.active {
   perspective: 800px;
   transition: transform 0.45s cubic-bezier(0.16,1,0.3,1),
               box-shadow 0.45s cubic-bezier(0.16,1,0.3,1);
-  /* staggered entrance */
+  /* staggered entrance then wave idle */
   opacity: 0;
-  animation: cardEnter 0.8s cubic-bezier(0.16,1,0.3,1) forwards;
+  animation:
+    cardEnter 0.8s cubic-bezier(0.16,1,0.3,1) forwards,
+    cardWave 3s ease-in-out infinite;
   will-change: transform;
 }
-.hc:nth-child(1) { animation-delay: 0.1s; }
-.hc:nth-child(2) { animation-delay: 0.25s; }
-.hc:nth-child(3) { animation-delay: 0.40s; }
-.hc:nth-child(4) { animation-delay: 0.55s; }
+.hc:nth-child(1) { animation-delay: 0.1s, 0.9s; }
+.hc:nth-child(2) { animation-delay: 0.25s, 1.2s; }
+.hc:nth-child(3) { animation-delay: 0.40s, 1.5s; }
+.hc:nth-child(4) { animation-delay: 0.55s, 1.8s; }
 
 @keyframes cardEnter {
   from { opacity: 0; transform: translateY(40px) scale(0.96); }
   to   { opacity: 1; transform: translateY(0) scale(1); }
 }
 
+@keyframes cardWave {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+
 .hc:hover {
   transform: translateY(-10px) scale(1.03);
+  animation-play-state: running, paused;
   box-shadow:
     0 0 0 1px rgba(242,101,34,0.25),
     0 0 40px rgba(242,101,34,0.15),
