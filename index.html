@@ -121,53 +121,163 @@
     </div>
   </header>
 
-  <!-- ── HERO SLIDER ── -->
+  <!-- ── HERO — 4 PRODUCT CARDS ── -->
   <section class="hero" id="hero">
 
-    <!-- Slide backgrounds -->
-    <div class="slides">
-      <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1920&q=90')"></div>
-      <div class="slide"        style="background-image:url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1920&q=90')"></div>
-      <div class="slide"        style="background-image:url(https://media.istockphoto.com/id/1387192613/photo/cheerful-young-woman-holding-laptop-computer-pretty-lady-model-with-emotionally-showing.jpg?s=612x612&w=0&k=20&c=7X5ufj-_Abie0UBzuPtP175eDszP1T5NSJBcFT97nWk=)"></div>
-    </div>
+    <!-- Background video -->
+    <video class="hero-bg-video" autoplay muted loop playsinline>
+      <source src="./ASSETS/images/Herobg.mp4" type="video/mp4">
+    </video>
 
-    <!-- Dark overlay -->
-    <div class="slide-overlay"></div>
+    <!-- Overlay layer -->
+    <div class="hero-bg-overlay"></div>
 
-    <!-- Hero text — changes per slide -->
-    <div class="hero-content" id="heroContent">
-      <div class="hero-badge">
-        <span class="badge-dot"></span>
-        <span id="badgeText">Intelligent Automation</span>
+    <div class="hero-cards-wrap">
+
+      <!-- ── CARD 1 : HRMS ── -->
+      <div class="hc" data-card="0">
+        <div class="hc__title-bar">
+          <span class="hc__label">01</span>
+          <h2 class="hc__title">HRMS</h2>
+        </div>
+        <div class="hc__slider" data-interval="3200">
+          <div class="hc__slides">
+            <div class="hc__slide active">
+              <img src="./ASSETS/images/Heros1.png" alt="IT Services" />
+            </div>
+            <div class="hc__slide">
+              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="IT Infrastructure" />
+            </div>
+            <div class="hc__slide">
+              <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80" alt="Cloud Services" />
+            </div>
+          </div>
+          <div class="hc__slide-dots"></div>
+        </div>
+        <div class="hc__body">
+          <div class="hc__text-slider" data-text-interval="5000">
+            <div class="hc__text-slides">
+              <div class="hc__text-slide active">
+                <p class="hc__desc">End-to-end IT solutions — from infrastructure management to cloud migrations, keeping your tech stack modern, secure, and efficient.</p>
+              </div>
+              <div class="hc__text-slide">
+                <p class="hc__desc">Robust cybersecurity, 24/7 monitoring, and disaster recovery — safeguarding your business with enterprise-grade IT infrastructure.</p>
+              </div>
+            </div>
+          </div>
+          <a href="./HTML/IT_services.html" class="hc__btn">Explore <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
       </div>
-      <h1 class="hero-title">
-        <span class="line" id="titleLine1">Future-Ready</span>
-        <span class="line accent" id="titleLine2">Technology</span>
-      </h1>
-      <p class="hero-sub" id="heroSub">
-        We combine AI, automation, and intelligent operations to help enterprises scale faster, reduce costs, and stay ahead of disruption.
-      </p>
-      <div class="hero-pills" id="heroPills">
-        <span class="hero-pill"><span class="pill-dot"></span>AI Automation</span>
-        <span class="hero-pill"><span class="pill-dot"></span>Efficient BPO</span>
-        <span class="hero-pill"><span class="pill-dot"></span>Proactive AIOps</span>
-      </div>
-    </div>
 
-    <!-- Scroll line -->
+      <!-- ── CARD 2 : OPPTY CHATS ── -->
+      <div class="hc" data-card="1">
+        <div class="hc__title-bar">
+          <span class="hc__label">02</span>
+          <h2 class="hc__title">OPPTY CHATS</h2>
+        </div>
+        <div class="hc__slider" data-interval="3700">
+          <div class="hc__slides">
+            <div class="hc__slide active">
+              <img src="./ASSETS/images/Heros1.png" alt="ITES Services" />
+            </div>
+            <div class="hc__slide">
+              <img src="./ASSETS/images/Heros2.png" alt="image1" />
+            </div>
+            <div class="hc__slide">
+              <img src="./ASSETS/images/Heros3.png" alt="image2" />
+            </div>
+          </div>
+          <div class="hc__slide-dots"></div>
+        </div>
+        <div class="hc__body">
+          <div class="hc__text-slider" data-text-interval="5000">
+            <div class="hc__text-slides">
+              <div class="hc__text-slide active">
+                <p class="hc__desc">IT-enabled digital services — data processing, technical support, and back-office solutions delivered with speed and precision.</p>
+              </div>
+              <div class="hc__text-slide">
+                <p class="hc__desc">Scalable analytics platforms and automated workflows — empowering data-driven decisions across your organization.</p>
+              </div>
+            </div>
+          </div>
+          <a href="./HTML/ITES_services.html" class="hc__btn">Explore <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+
+      <!-- ── CARD 3 : CRM ── -->
+      <div class="hc" data-card="2">
+        <div class="hc__title-bar">
+          <span class="hc__label">03</span>
+          <h2 class="hc__title">CRM</h2>
+        </div>
+        <div class="hc__slider" data-interval="4100">
+          <div class="hc__slides">
+            <div class="hc__slide active">
+              <img src="./ASSETS/images/Hero2.avif" alt="BPO Services" />
+            </div>
+            <div class="hc__slide">
+              <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80" alt="Business Process" />
+            </div>
+            <div class="hc__slide">
+              <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=800&q=80" alt="Operations" />
+            </div>
+          </div>
+          <div class="hc__slide-dots"></div>
+        </div>
+        <div class="hc__body">
+          <div class="hc__text-slider" data-text-interval="5000">
+            <div class="hc__text-slides">
+              <div class="hc__text-slide active">
+                <p class="hc__desc">World-class business process outsourcing — reducing costs by 60%, boosting efficiency, and letting you focus on growing your business.</p>
+              </div>
+              <div class="hc__text-slide">
+                <p class="hc__desc">Dedicated offshore teams, compliance-ready processes, and seamless integration — your trusted extension for non-core operations.</p>
+              </div>
+            </div>
+          </div>
+          <a href="./HTML/BPO.html" class="hc__btn">Explore <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+
+      <!-- ── CARD 4 : LMS ── -->
+      <div class="hc" data-card="3">
+        <div class="hc__title-bar">
+          <span class="hc__label">04</span>
+          <h2 class="hc__title">LMS</h2>
+        </div>
+        <div class="hc__slider" data-interval="3500">
+          <div class="hc__slides">
+            <div class="hc__slide active">
+              <img src="./ASSETS/images/hero3.jpg" alt="Oppty Learn" />
+            </div>
+            <div class="hc__slide">
+              <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" alt="Learning" />
+            </div>
+            <div class="hc__slide">
+              <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80" alt="Upskilling" />
+            </div>
+          </div>
+          <div class="hc__slide-dots"></div>
+        </div>
+        <div class="hc__body">
+          <div class="hc__text-slider" data-text-interval="5000">
+            <div class="hc__text-slides">
+              <div class="hc__text-slide active">
+                <p class="hc__desc">Future-proof your career with industry-led courses, certifications, and mentorship programs built for the modern workforce.</p>
+              </div>
+              <div class="hc__text-slide">
+                <p class="hc__desc">Hands-on projects, expert-led bootcamps, and placement assistance — bridging the gap between learning and earning.</p>
+              </div>
+            </div>
+          </div>
+          <a href="./HTML/Oppty_learn.html" class="hc__btn">Explore <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+
+    </div><!-- /hero-cards-wrap -->
+
+    <!-- Scroll hint -->
     <div class="scroll-hint"><div class="scroll-line"></div></div>
-
-    <!-- Dots -->
-    <div class="hero-dots" id="heroDots">
-      <button class="hero-dot active" onclick="goTo(0)"></button>
-      <button class="hero-dot" onclick="goTo(1)"></button>
-      <button class="hero-dot" onclick="goTo(2)"></button>
-    </div>
-
-    <!-- Slide counter -->
-    <div class="slide-counter">
-      <span id="slideNum">01</span><span class="sc-sep"></span><span>03</span>
-    </div>
 
   </section>
 
@@ -991,7 +1101,115 @@
   </footer>
 
   <script>
-    
+    // ── Card image sliders (synchronized — all cards change together) ──
+    (function() {
+      var allSliders = document.querySelectorAll('.hc__slider');
+      var sliderStates = [];
+
+      // Build dots for each slider and init state
+      allSliders.forEach(function(slider) {
+        var slides = slider.querySelectorAll('.hc__slide');
+        var dotsWrap = slider.querySelector('.hc__slide-dots');
+        var state = { slides: slides, dotsWrap: dotsWrap, current: 0 };
+
+        slides.forEach(function(_, i) {
+          var dot = document.createElement('button');
+          dot.className = 'hc__dot' + (i === 0 ? ' active' : '');
+          dot.setAttribute('aria-label', 'Slide ' + (i + 1));
+          dot.addEventListener('click', function() { goToSlide(sliderStates.indexOf(state), i); });
+          dotsWrap.appendChild(dot);
+        });
+
+        sliderStates.push(state);
+      });
+
+      function goToSlide(sliderIdx, idx) {
+        var s = sliderStates[sliderIdx];
+        var slides = s.slides;
+        var dotsWrap = s.dotsWrap;
+        var current = s.current;
+
+        slides[current].classList.remove('active');
+        slides[current].classList.add('leaving');
+        dotsWrap.querySelectorAll('.hc__dot')[current].classList.remove('active');
+
+        var prev = current;
+        s.current = (idx + slides.length) % slides.length;
+        slides[s.current].classList.add('active');
+        dotsWrap.querySelectorAll('.hc__dot')[s.current].classList.add('active');
+
+        setTimeout(function() {
+          slides[prev].classList.remove('leaving');
+        }, 750);
+      }
+
+      function advanceAll() {
+        sliderStates.forEach(function(s, i) {
+          goToSlide(i, s.current + 1);
+        });
+      }
+
+      // Synchronized auto-advance — same interval for all
+      var SHARED_INTERVAL = 3500;
+      var timer = setInterval(advanceAll, SHARED_INTERVAL);
+
+      // Pause on hover (pause all when any is hovered)
+      allSliders.forEach(function(slider) {
+        slider.addEventListener('mouseenter', function() { clearInterval(timer); });
+        slider.addEventListener('mouseleave', function() {
+          timer = setInterval(advanceAll, SHARED_INTERVAL);
+        });
+      });
+    })();
+
+    // ── Card text sliders (synchronized — all cards change together, separate from images) ──
+    (function() {
+      var allTextSliders = document.querySelectorAll('.hc__text-slider');
+      var textStates = [];
+
+      allTextSliders.forEach(function(textSlider) {
+        var slides = textSlider.querySelectorAll('.hc__text-slide');
+        var state = { slides: slides, current: 0 };
+        textStates.push(state);
+      });
+
+      function goToTextSlide(sliderIdx, idx) {
+        var s = textStates[sliderIdx];
+        var slides = s.slides;
+        var current = s.current;
+
+        slides[current].classList.remove('active');
+        slides[current].classList.add('leaving');
+
+        var prev = current;
+        s.current = (idx + slides.length) % slides.length;
+        slides[s.current].classList.add('active');
+
+        setTimeout(function() {
+          slides[prev].classList.remove('leaving');
+        }, 550);
+      }
+
+      function advanceAllText() {
+        textStates.forEach(function(s, i) {
+          goToTextSlide(i, s.current + 1);
+        });
+      }
+
+      var TEXT_INTERVAL = 5000;
+      var textTimer = setInterval(advanceAllText, TEXT_INTERVAL);
+
+      // Pause on card hover (pause all text sliders when any card is hovered)
+      allTextSliders.forEach(function(textSlider) {
+        var card = textSlider.closest('.hc');
+        if (card) {
+          card.addEventListener('mouseenter', function() { clearInterval(textTimer); });
+          card.addEventListener('mouseleave', function() {
+            textTimer = setInterval(advanceAllText, TEXT_INTERVAL);
+          });
+        }
+      });
+    })();
 
     // ── Mobile menu ──
     function toggleMenu() {
@@ -1005,16 +1223,13 @@
       btn.closest('.mobile-dropdown').classList.toggle('open');
     }
 
-    // ── Desktop nav dropdown (click) ──
+    // ── Desktop nav dropdown ──
     function toggleNavDropdown(toggle) {
       const dropdown = toggle.closest('.nav-dropdown');
       const isOpen = dropdown.classList.contains('open');
-      // Close any other open dropdowns first
       document.querySelectorAll('.nav-dropdown.open').forEach(d => d.classList.remove('open'));
       if (!isOpen) dropdown.classList.add('open');
     }
-
-    // Close desktop dropdown when clicking outside
     document.addEventListener('click', function(e) {
       if (!e.target.closest('.nav-dropdown')) {
         document.querySelectorAll('.nav-dropdown.open').forEach(d => d.classList.remove('open'));
@@ -1027,6 +1242,118 @@
       document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 40);
       document.getElementById('navbar').classList.toggle('past-hero', window.scrollY > heroH - 60);
     });
+
+    // ── Scroll-reveal ──
+    (function() {
+      const revealEls = document.querySelectorAll('[data-reveal]');
+      if (!('IntersectionObserver' in window)) {
+        revealEls.forEach(el => el.classList.add('is-revealed'));
+        return;
+      }
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-revealed');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -48px 0px' });
+      revealEls.forEach(el => observer.observe(el));
+    })();
+
+    // ── Counter count-up ──
+    (function() {
+      const counters = document.querySelectorAll('.counter-num');
+      if (!counters.length) return;
+      function easeOutQuart(t) { return 1 - Math.pow(1 - t, 4); }
+      function animateCounter(el) {
+        const target = parseInt(el.dataset.target, 10);
+        const suffix = el.dataset.suffix || '';
+        const duration = 1800;
+        const start = performance.now();
+        function tick(now) {
+          const progress = Math.min((now - start) / duration, 1);
+          const value = Math.round(easeOutQuart(progress) * target);
+          const display = target >= 1000 ? (value / 1000).toFixed(value % 1000 === 0 ? 0 : 1) + 'K' : value;
+          el.textContent = display + (progress < 1 ? '' : suffix);
+          if (progress < 1) requestAnimationFrame(tick);
+          else el.textContent = (target >= 1000 ? (target / 1000) + 'K' : target) + suffix;
+        }
+        requestAnimationFrame(tick);
+      }
+      const counterSection = document.querySelector('.about-counters');
+      if (!counterSection) return;
+      let fired = false;
+      const counterObserver = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting && !fired) {
+          fired = true;
+          counters.forEach(el => animateCounter(el));
+          counterObserver.disconnect();
+        }
+      }, { threshold: 0.4 });
+      counterObserver.observe(counterSection);
+    })();
+
+    // ── Portfolio filter ──
+    (function() {
+      const btns = document.querySelectorAll('.pf-btn');
+      const items = document.querySelectorAll('.pg-item');
+      btns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          btns.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          const filter = this.dataset.filter;
+          items.forEach(item => {
+            item.classList.toggle('pf-hidden', filter !== 'all' && item.dataset.cat !== filter);
+          });
+        });
+      });
+    })();
+
+    // ── Testimonials slider ──
+    (function() {
+      const track = document.getElementById('testiTrack');
+      const dotsWrap = document.getElementById('testiDots');
+      if (!track) return;
+      const cards = track.querySelectorAll('.testi-card');
+      const total = cards.length;
+      function visibleCount() {
+        if (window.innerWidth <= 560) return 1;
+        if (window.innerWidth <= 900) return 2;
+        return 3;
+      }
+      let cur = 0, autoTimer;
+      function buildDots() {
+        dotsWrap.innerHTML = '';
+        const pages = Math.ceil(total / visibleCount());
+        for (let i = 0; i < pages; i++) {
+          const b = document.createElement('button');
+          b.className = 'testi-dot' + (i === 0 ? ' active' : '');
+          b.addEventListener('click', () => goToTesti(i));
+          dotsWrap.appendChild(b);
+        }
+      }
+      function goToTesti(idx) {
+        const vc = visibleCount();
+        const pages = Math.ceil(total / vc);
+        cur = (idx + pages) % pages;
+        const cardW = cards[0].getBoundingClientRect().width;
+        track.style.transform = `translateX(-${cur * (cardW + 24) * vc}px)`;
+        dotsWrap.querySelectorAll('.testi-dot').forEach((d, i) => d.classList.toggle('active', i === cur));
+      }
+      track.addEventListener('mouseenter', () => clearInterval(autoTimer));
+      track.addEventListener('mouseleave', () => { autoTimer = setInterval(() => goToTesti(cur + 1), 4000); });
+      let touchX = 0;
+      track.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, { passive: true });
+      track.addEventListener('touchend', e => {
+        const diff = touchX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 40) goToTesti(diff > 0 ? cur + 1 : cur - 1);
+      });
+      buildDots();
+      autoTimer = setInterval(() => goToTesti(cur + 1), 4000);
+      window.addEventListener('resize', () => { buildDots(); goToTesti(0); });
+    })();
+  </script>
 
     // ── Scroll-reveal (IntersectionObserver) ──
     (function () {
@@ -1149,106 +1476,14 @@
       counterObserver.observe(counterSection);
     })();
 
-    // ── SLIDER DATA ──
-    const slides = [
-      {
-        badge : 'Intelligent Automation',
-        line1 : 'Future-Ready',
-        line2 : 'Technology',
-        sub   : 'We combine AI, automation, and intelligent operations to help enterprises scale faster, reduce costs, and stay ahead of disruption.',
-        pills : ['AI Automation', 'Efficient BPO', 'Proactive AIOps']
-      },
-      {
-        badge : 'Business Process Outsourcing',
-        line1 : 'Streamline Your',
-        line2 : 'Operations',
-        sub   : 'From back-office processing to customer engagement, our BPO solutions are built for accuracy, speed, and seamless integration.',
-        pills : ['Process Excellence', 'Cost Efficiency', 'Scalable Teams']
-      },
-      {
-        badge : 'Leadership & Innovation',
-        line1 : 'Driving Digital',
-        line2 : 'Transformation',
-        sub   : 'Partner with Oppty to modernize your workforce, accelerate growth, and build the capabilities your business needs for tomorrow.',
-        pills : ['Strategic Vision', 'Digital Upskilling', 'Proven Results']
+    // ── Set active nav link (Home is active on index) ──
+    (function() {
+      const homeLink = document.querySelector('nav a.nav-active');
+      if (!homeLink) {
+        const first = document.querySelector('nav > a');
+        if (first) first.classList.add('nav-active');
       }
-    ];
-
-    let current  = 0;
-    let timer    = null;
-    let isAnimating = false;
-    const INTERVAL  = 4000; // 4s per slide
-
-    const slideEls  = document.querySelectorAll('.slide');
-    const dotEls    = document.querySelectorAll('.hero-dot');
-    const content   = document.getElementById('heroContent');
-    const numEl     = document.getElementById('slideNum');
-
-    function pad(n){ return n < 10 ? '0'+n : ''+n; }
-
-    function updateContent(idx) {
-      const d = slides[idx];
-      document.getElementById('badgeText').textContent  = d.badge;
-      document.getElementById('titleLine1').textContent = d.line1;
-      document.getElementById('titleLine2').textContent = d.line2;
-      document.getElementById('heroSub').textContent    = d.sub;
-
-      const pillsEl = document.getElementById('heroPills');
-      pillsEl.innerHTML = d.pills.map(p =>
-        `<span class="hero-pill"><span class="pill-dot"></span>${p}</span>`
-      ).join('');
-
-      numEl.textContent = pad(idx + 1);
-    }
-
-    function goTo(idx) {
-      if (isAnimating || idx === current) return;
-      isAnimating = true;
-
-      const prevIdx = current;
-
-      // 1. Text exits first
-      content.classList.remove('text-in');
-      content.classList.add('text-out');
-
-      setTimeout(() => {
-        // 2. Slide wipe begins — new slide clips in, old drifts out
-        slideEls[prevIdx].classList.remove('active');
-        slideEls[prevIdx].classList.add('leaving');
-        slideEls[idx].classList.add('active');
-
-        dotEls[prevIdx].classList.remove('active');
-        dotEls[idx].classList.add('active');
-
-        // 3. Update and reveal new text
-        current = idx;
-        updateContent(current);
-        content.classList.remove('text-out');
-        content.classList.add('text-in');
-
-        // 4. Clean up leaving class after wipe completes
-        setTimeout(() => {
-          slideEls[prevIdx].classList.remove('leaving');
-          isAnimating = false;
-        }, 1300);
-
-      }, 400);
-
-      resetTimer();
-    }
-
-    function next() {
-      goTo((current + 1) % slides.length);
-    }
-
-    function resetTimer() {
-      clearInterval(timer);
-      timer = setInterval(next, INTERVAL);
-    }
-
-    // Init
-    content.classList.add('text-in');
-    resetTimer();
+    })();
 
     // ── Portfolio filter ──
     (function () {
