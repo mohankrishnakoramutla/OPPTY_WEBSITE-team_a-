@@ -2525,83 +2525,83 @@ header.past-hero .nav-dropdown__toggle.active {
 /* ── Single card — glassmorphic ── */
 .hc {
   position: relative;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.10);
   border-radius: 20px;
-  overflow: hidden;
+  overflow: visible;
   display: flex;
   flex-direction: column;
-  backdrop-filter: blur(16px) saturate(140%);
-  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  perspective: 800px;
   transition: transform 0.45s cubic-bezier(0.16,1,0.3,1),
-              border-color 0.35s ease,
               box-shadow 0.45s cubic-bezier(0.16,1,0.3,1);
   /* staggered entrance */
   opacity: 0;
   animation: cardEnter 0.8s cubic-bezier(0.16,1,0.3,1) forwards;
-  /* subtle floating idle */
-  animation: cardEnter 0.8s cubic-bezier(0.16,1,0.3,1) forwards,
-             cardFloat 6s ease-in-out 1.5s infinite;
+  will-change: transform;
 }
-.hc:nth-child(1) { animation-delay: 0.1s, 1.5s; }
-.hc:nth-child(2) { animation-delay: 0.25s, 1.6s; }
-.hc:nth-child(3) { animation-delay: 0.40s, 1.7s; }
-.hc:nth-child(4) { animation-delay: 0.55s, 1.8s; }
+.hc:nth-child(1) { animation-delay: 0.1s; }
+.hc:nth-child(2) { animation-delay: 0.25s; }
+.hc:nth-child(3) { animation-delay: 0.40s; }
+.hc:nth-child(4) { animation-delay: 0.55s; }
 
 @keyframes cardEnter {
   from { opacity: 0; transform: translateY(40px) scale(0.96); }
   to   { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-@keyframes cardFloat {
-  0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(-4px); }
-}
-
 .hc:hover {
-  transform: translateY(-10px) scale(1.03) !important;
-  border-color: rgba(242,101,34,0.50);
+  transform: translateY(-10px) scale(1.03);
   box-shadow:
     0 0 0 1px rgba(242,101,34,0.25),
     0 0 40px rgba(242,101,34,0.15),
     0 0 80px rgba(242,101,34,0.06),
     0 24px 48px rgba(0,0,0,0.35);
-  animation-play-state: running, paused;
 }
 
-/* ── Animated gradient border glow ── */
-.hc__border-glow {
+/* ── Animated gradient border glow (pseudo-element approach) ── */
+.hc::before {
+  content: '';
   position: absolute;
-  inset: -1px;
-  border-radius: 21px;
+  inset: -2px;
+  border-radius: 22px;
   background: conic-gradient(
-    from var(--glow-angle, 0deg),
-    transparent 0%,
-    rgba(242,101,34,0.5) 10%,
-    transparent 20%,
-    transparent 50%,
-    rgba(59,130,246,0.4) 60%,
-    transparent 70%
+    from 0deg,
+    rgba(242,101,34,0.6),
+    transparent 15%,
+    transparent 40%,
+    rgba(59,130,246,0.5),
+    transparent 55%,
+    transparent 85%,
+    rgba(242,101,34,0.6)
   );
   opacity: 0;
-  transition: opacity 0.4s ease;
   z-index: -1;
-  animation: glowRotate 4s linear infinite;
+  transition: opacity 0.4s ease;
+  animation: borderSpin 4s linear infinite;
 }
-.hc:hover .hc__border-glow {
+.hc:hover::before {
   opacity: 1;
 }
 
-@keyframes glowRotate {
-  to { --glow-angle: 360deg; }
+@keyframes borderSpin {
+  from { filter: hue-rotate(0deg); }
+  to   { filter: hue-rotate(360deg); }
 }
 
-/* Register custom property for animation */
-@property --glow-angle {
-  syntax: '<angle>';
-  initial-value: 0deg;
-  inherits: false;
+/* ── Card inner (clips content, allows border glow outside) ── */
+.hc__inner {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(8,10,16,0.85);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  transform-style: preserve-3d;
 }
+
+
 
 /* ── Shine sweep on hover ── */
 .hc__shine {
