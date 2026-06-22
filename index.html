@@ -12,6 +12,16 @@
 </head>
 <body>
 
+  <!-- ── PAGE LOADER ── -->
+  <div class="page-loader" id="pageLoader">
+    <div class="page-loader__logo">
+      <div class="page-loader__ring"></div>
+      <div class="page-loader__ring"></div>
+      <div class="page-loader__ring"></div>
+      <img class="page-loader__img" src="./ASSETS/images/oppty.png" alt="Loading" />
+    </div>
+  </div>
+
   <!-- ── FLOATING SOCIAL BAR ── -->
   <div class="social-bar">
     <a href="https://www.instagram.com/opptytech?igsh=YTExdTBsc3Y4ejU2" target="_blank" rel="noopener" aria-label="Instagram" class="social-bar__link">
@@ -1398,6 +1408,47 @@
       autoTimer = setInterval(() => goToTesti(cur + 1), 4000);
       window.addEventListener('resize', () => { buildDots(); goToTesti(0); });
     })();
+  </script>
+
+  <script>
+  /* ── Page Loader on Nav Clicks ── */
+  (function() {
+    var loader = document.getElementById('pageLoader');
+    if (!loader) return;
+
+    // Show loader, then navigate
+    function showLoaderAndGo(href) {
+      loader.classList.add('is-visible');
+      setTimeout(function() { window.location.href = href; }, 600);
+    }
+
+    // Intercept clicks on internal nav links
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a');
+      if (!link) return;
+      var href = link.getAttribute('href');
+      if (!href) return;
+
+      // Skip: external, anchor-only, tel:, mailto:, target=_blank, current page
+      if (href.startsWith('#') || href.startsWith('tel:') || href.startsWith('mailto:') ||
+          link.target === '_blank' || href.startsWith('http')) return;
+
+      // Skip if already on same page
+      if (link.pathname === window.location.pathname && !link.hash) return;
+
+      e.preventDefault();
+      showLoaderAndGo(href);
+    });
+
+    // Hide loader on page load (for back-button returns)
+    window.addEventListener('load', function() {
+      loader.classList.remove('is-visible');
+    });
+    // Also hide after a max timeout
+    setTimeout(function() {
+      loader.classList.remove('is-visible');
+    }, 1500);
+  })();
   </script>
 
   
