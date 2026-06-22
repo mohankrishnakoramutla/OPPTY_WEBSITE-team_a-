@@ -13,7 +13,7 @@
 <body class="page-light">
 
   <!-- ── PAGE LOADER ── -->
-  <div class="page-loader" id="pageLoader">
+  <div class="page-loader is-visible" id="pageLoader">
     <div class="page-loader__logo">
       <div class="page-loader__ring"></div>
       <div class="page-loader__ring"></div>
@@ -780,7 +780,13 @@
       e.preventDefault();
       showLoaderAndGo(href);
     });
-    window.addEventListener('load', function() { loader.classList.remove('is-visible'); });
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        loader.classList.add('is-exiting');
+        loader.classList.remove('is-visible');
+        setTimeout(function() { loader.classList.remove('is-exiting'); }, 400);
+      }, 500);
+    });
     setTimeout(function() { loader.classList.remove('is-visible'); }, 1500);
   })();
   </script>

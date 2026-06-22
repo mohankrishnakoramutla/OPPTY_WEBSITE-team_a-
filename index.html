@@ -13,7 +13,7 @@
 <body>
 
   <!-- ── PAGE LOADER ── -->
-  <div class="page-loader" id="pageLoader">
+  <div class="page-loader is-visible" id="pageLoader">
     <div class="page-loader__logo">
       <div class="page-loader__ring"></div>
       <div class="page-loader__ring"></div>
@@ -1440,9 +1440,13 @@
       showLoaderAndGo(href);
     });
 
-    // Hide loader on page load (for back-button returns)
+    // Hide loader on page load (initial visit or back-button)
     window.addEventListener('load', function() {
-      loader.classList.remove('is-visible');
+      setTimeout(function() {
+        loader.classList.add('is-exiting');
+        loader.classList.remove('is-visible');
+        setTimeout(function() { loader.classList.remove('is-exiting'); }, 400);
+      }, 500);
     });
     // Also hide after a max timeout
     setTimeout(function() {

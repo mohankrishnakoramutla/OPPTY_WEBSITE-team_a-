@@ -34,11 +34,17 @@
   visibility: visible;
   pointer-events: all;
 }
+.page-loader.is-exiting {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
 
 .page-loader__logo {
   position: relative;
-  width: 90px;
-  height: 90px;
+  width: 140px;
+  height: 140px;
+  filter: drop-shadow(0 0 20px rgba(242,101,34,0.5))
+          drop-shadow(0 0 60px rgba(242,101,34,0.25));
 }
 
 .page-loader__ring {
@@ -50,22 +56,22 @@
   animation: loaderSpin 0.9s linear infinite;
 }
 .page-loader__ring:nth-child(2) {
-  inset: 8px;
+  inset: 12px;
   border-top-color: rgba(59,130,246,0.6);
   animation-duration: 1.4s;
   animation-direction: reverse;
 }
 .page-loader__ring:nth-child(3) {
-  inset: 16px;
+  inset: 24px;
   border-top-color: rgba(242,101,34,0.35);
   animation-duration: 1.8s;
 }
 
 .page-loader__img {
   position: absolute;
-  inset: 20px;
-  width: calc(100% - 40px);
-  height: calc(100% - 40px);
+  inset: 30px;
+  width: calc(100% - 60px);
+  height: calc(100% - 60px);
   object-fit: contain;
   animation: loaderPulse 1.2s ease-in-out infinite;
 }
